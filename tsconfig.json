@@ -14,10 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "ignoreErrors": true,
-    "strict": false,
-    "noImplicitAny": false,
-    "skipLibCheck": true,
     "paths": {
       "@/*": ["./*"]
     }
