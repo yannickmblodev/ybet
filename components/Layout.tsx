@@ -63,7 +63,22 @@ export default function Layout({ children }: Props) {
     }),
   };
 
-  const handleRegister = async (e) => {
+  // const handleRegister = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const userCredential = await createUserWithEmailAndPassword(
+  //       auth,
+  //       email,
+  //       password
+  //     );
+  //     console.log("Utilisateur créé :", userCredential.user);
+  //     alert("Compte créé avec succès !");
+  //   } catch (error) {
+  //     setError(error.message);
+  //   }
+  // };
+
+  const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const userCredential = await createUserWithEmailAndPassword(
@@ -74,7 +89,11 @@ export default function Layout({ children }: Props) {
       console.log("Utilisateur créé :", userCredential.user);
       alert("Compte créé avec succès !");
     } catch (error) {
-      setError(error.message);
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("Une erreur inconnue est survenue.");
+      }
     }
   };
 
