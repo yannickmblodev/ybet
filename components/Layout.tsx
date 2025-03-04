@@ -63,7 +63,7 @@ export default function Layout({ children }: Props) {
     }),
   };
 
-  const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     try {
       const userCredential = await createUserWithEmailAndPassword(
@@ -74,11 +74,7 @@ export default function Layout({ children }: Props) {
       console.log("Utilisateur créé :", userCredential.user);
       alert("Compte créé avec succès !");
     } catch (error) {
-      if (error instanceof Error) {
-        setError(error.message);
-      } else {
-        setError("Une erreur inconnue est survenue.");
-      }
+      setError(error.message);
     }
   };
 
