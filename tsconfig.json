@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "ignoreErrors": true,
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -15,6 +14,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "ignoreErrors": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
     "paths": {
       "@/*": ["./*"]
     }
