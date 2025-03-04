@@ -63,21 +63,6 @@ export default function Layout({ children }: Props) {
     }),
   };
 
-  // const handleRegister = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const userCredential = await createUserWithEmailAndPassword(
-  //       auth,
-  //       email,
-  //       password
-  //     );
-  //     console.log("Utilisateur créé :", userCredential.user);
-  //     alert("Compte créé avec succès !");
-  //   } catch (error) {
-  //     setError(error.message);
-  //   }
-  // };
-
   const handleRegister = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
