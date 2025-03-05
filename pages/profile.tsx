@@ -132,7 +132,7 @@ const profile = () => {
                           <input
                             type="text"
                             // @ts-ignore
-                            placeholder={user?.name || "entrer votre nom"}
+                            placeholder={user?.name || "entrer votre nom complet"}
                           />
                           <div className="left-icon">
                             <i className="fas fa-user"></i>
