@@ -131,6 +131,7 @@ const profile = () => {
                           {/* <input type="text" placeholder="entrer votre nom" /> */}
                           <input
                             type="text"
+                            // @ts-ignore
                             placeholder={user?.name || "entrer votre nom"}
                           />
                           <div className="left-icon">
