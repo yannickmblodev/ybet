@@ -3,63 +3,63 @@ import BreadCrumb from '@/components/BreadCrumb';
 import Sponsor from '@/components/Sponsor';
 
 const matchData = [
-   {
-      id: 1,
-      title: 'World Championship. Women',
-      img: '',
-      team1: { name: 'Colombia', img: '' },
-      team2: { name: 'Peru', img: '' },
-   },
-   {
-      id: 2,
-      title: 'South American Championship',
-      img: '',
-      team1: { name: 'Colombia', img: '' },
-      team2: { name: 'Peru', img: '' },
-   },
-   {
-      id: 3,
-      title: 'Championship of the Czech Republic, Extr...',
-      img: '',
-      team1: { name: 'Pribram', img: '/img/table/pebro.png' },
-      team2: { name: 'Kladno', img: '/img/table/kladno.png' },
-   },
-   {
-      id: 4,
-      title: 'Championship of France. League A',
-      img: '',
-      team1: { name: 'Narbonne', img: '' },
-      team2: { name: 'Tourcoing lille', img: '' },
-   },
-   {
-      id: 5,
-      title: 'Championship of France. League A',
-      img: '',
-      team1: { name: 'Set', img: '' },
-      team2: { name: 'Nantes', img: '' },
-   },
-   {
-      id: 6,
-      title: 'Championship of Finland. Korisliiga',
-      img: '',
-      team1: { name: 'Caloocan Excellence', img: '' },
-      team2: { name: 'Muntinlupa Cagers', img: '' },
-   },
-   {
-      id: 7,
-      title: 'World Championship. Women',
-      img: '/img/table/korislinga.png',
-      team1: { name: 'Kataja', img: '/img/table/kataja.png' },
-      team2: { name: 'Puerto Rico', img: '/img/table/ktp.png' },
-   },
-   {
-      id: 8,
-      title: 'Swedish Championship',
-      img: '',
-      team1: { name: 'Uppsala Basket', img: '/img/table/uppsala.png' },
-      team2: { name: 'BC lulea', img: '/img/table/lulea.png' },
-   },
-]
+  {
+    id: 1,
+    title: "Championnat du monde. Les femmes",
+    img: "",
+    team1: { name: "Colombia", img: "" },
+    team2: { name: "Peru", img: "" },
+  },
+  {
+    id: 2,
+    title: "South American Championship",
+    img: "",
+    team1: { name: "Colombia", img: "" },
+    team2: { name: "Peru", img: "" },
+  },
+  {
+    id: 3,
+    title: "Championship of the Czech Republic, Extr...",
+    img: "",
+    team1: { name: "Pribram", img: "/img/table/pebro.png" },
+    team2: { name: "Kladno", img: "/img/table/kladno.png" },
+  },
+  {
+    id: 4,
+    title: "Championship of France. League A",
+    img: "",
+    team1: { name: "Narbonne", img: "" },
+    team2: { name: "Tourcoing lille", img: "" },
+  },
+  {
+    id: 5,
+    title: "Championship of France. League A",
+    img: "",
+    team1: { name: "Set", img: "" },
+    team2: { name: "Nantes", img: "" },
+  },
+  {
+    id: 6,
+    title: "Championship of Finland. Korisliiga",
+    img: "",
+    team1: { name: "Caloocan Excellence", img: "" },
+    team2: { name: "Muntinlupa Cagers", img: "" },
+  },
+  {
+    id: 7,
+    title: "World Championship. Women",
+    img: "/img/table/korislinga.png",
+    team1: { name: "Kataja", img: "/img/table/kataja.png" },
+    team2: { name: "Puerto Rico", img: "/img/table/ktp.png" },
+  },
+  {
+    id: 8,
+    title: "Swedish Championship",
+    img: "",
+    team1: { name: "Uppsala Basket", img: "/img/table/uppsala.png" },
+    team2: { name: "BC lulea", img: "/img/table/lulea.png" },
+  },
+];
 type LiveEventProps = {
    title: string;
    team1: string;

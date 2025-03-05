@@ -846,7 +846,7 @@ const profile = () => {
                               <span>MTN CI</span>
                             </Link>
                             <Link href="#0">
-                              <span> 1 BTC = $19565.46</span>
+                              {/* <span> 1 BTC = $19565.46</span> */}
                             </Link>
                           </div>
                         </div>
@@ -863,7 +863,7 @@ const profile = () => {
                               <span>Orange CI</span>
                             </Link>
                             <Link href="#0">
-                              <span> 1 ETH = $1343.21</span>
+                              {/* <span> 1 ETH = $1343.21</span> */}
                             </Link>
                           </div>
                         </div>
@@ -880,7 +880,7 @@ const profile = () => {
                               <span>WAVE CI</span>
                             </Link>
                             <Link href="#0">
-                              <span> 1 USDT = $1.00</span>
+                              {/* <span> 1 USDT = $1.00</span> */}
                             </Link>
                           </div>
                         </div>
@@ -894,10 +894,10 @@ const profile = () => {
                                   alt="icon"
                                 />
                               </span>
-                              <span>MOOV CI</span>
+                              <span>MOOV Africa</span>
                             </Link>
                             <Link href="#0">
-                              <span> 1 LTC = $53.76</span>
+                              {/* <span> 1 LTC = $53.76</span> */}
                             </Link>
                           </div>
                         </div>
@@ -1030,7 +1030,7 @@ const profile = () => {
                               <span>Bitcoin</span>
                             </Link>
                             <Link href="#0">
-                              <span> 1 BTC = $19565.46</span>
+                              {/* <span> 1 BTC = $19565.46</span> */}
                             </Link>
                           </div>
                         </div>
@@ -1046,7 +1046,7 @@ const profile = () => {
                               <span>Ethereum</span>
                             </Link>
                             <Link href="#0">
-                              <span> 1 ETH = $1343.21</span>
+                              {/* <span> 1 ETH = $1343.21</span> */}
                             </Link>
                           </div>
                         </div>
@@ -1062,7 +1062,7 @@ const profile = () => {
                               <span>TETHER</span>
                             </Link>
                             <Link href="#0">
-                              <span> 1 USDT = $1.00</span>
+                              {/* <span> 1 USDT = $1.00</span> */}
                             </Link>
                           </div>
                         </div>
@@ -1078,7 +1078,7 @@ const profile = () => {
                               <span>Litecoin</span>
                             </Link>
                             <Link href="#0">
-                              <span> 1 LTC = $53.76</span>
+                              {/* <span> 1 LTC = $53.76</span> */}
                             </Link>
                           </div>
                         </div>

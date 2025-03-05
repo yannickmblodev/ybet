@@ -21,7 +21,7 @@ const Banner = () => {
             <div className="container">
               <div className="banner-content banner-bg-one">
                 <h1>100% de Bonus</h1>
-                <h2>Sur votre 1er Parie</h2>
+                <h2>sur votre 1er Pari</h2>
                 <Link
                   href="#0"
                   className="cmn--btn"
@@ -35,7 +35,7 @@ const Banner = () => {
             <div className="container">
               <div className="banner-content">
                 <h1>Bonus CashBack</h1>
-                <h2>20% si votre 1er Paris est perdant</h2>
+                <h2>20% si votre 1er Pari est perdant</h2>
                 <Link
                   href="#0"
                   className="cmn--btn"

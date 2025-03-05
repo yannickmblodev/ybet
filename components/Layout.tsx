@@ -347,7 +347,7 @@ export default function Layout({ children }: Props) {
                             <div className="icon">
                               <i className="fas fa-star"></i>
                             </div>
-                            <span>Favorie</span>
+                            <span>Favori</span>
                           </Link>
                         </li>
                       </ul>
@@ -585,7 +585,7 @@ export default function Layout({ children }: Props) {
                         data-bs-target="#coombo"
                         href="#"
                       >
-                        <span>Paris Unique</span>
+                        <span>Pari Unique</span>
                       </Link>
                     </li>
                     <li className="nav-item">
@@ -666,7 +666,7 @@ export default function Layout({ children }: Props) {
                           </div>
                           <div className="combo-footer">
                             <Link href="#0" className="cmn--btn">
-                              <span> Placer un paris </span>
+                              <span> Placer un pari </span>
                             </Link>
                           </div>
                         </div>
@@ -772,7 +772,7 @@ export default function Layout({ children }: Props) {
                               <div className="match-items match-odds">
                                 <div className="match-items-left">
                                   <div className="cont">
-                                    <span>Total odds</span>
+                                    <span>Total des cotes</span>
                                   </div>
                                 </div>
                                 <div className="match-items-right">
@@ -805,18 +805,18 @@ export default function Layout({ children }: Props) {
                           <form action="#">
                             <input
                               type="number"
-                              placeholder="Montant du paris"
+                              placeholder="Montant du pari"
                             />
                             <button type="submit">Max</button>
                           </form>
                         </div>
                         <div className="possible-win">
-                          <span>Possible win</span>
-                          <span className="amount">$300</span>
+                          {/* <span>Possible win</span>
+                          <span className="amount">$300</span> */}
                         </div>
                         <div className="combo-footer">
                           <Link href="#0" className="cmn--btn">
-                            <span> Placer un paris</span>
+                            <span> Placer un pari</span>
                           </Link>
                         </div>
                       </div>
@@ -1395,7 +1395,7 @@ export default function Layout({ children }: Props) {
                                 </div>
                                 <div className="combo-footer">
                                   <Link href="#0" className="cmn--btn">
-                                    <span> Placer un paris</span>
+                                    <span> Placer un pari</span>
                                   </Link>
                                 </div>
                               </div>
@@ -1505,7 +1505,7 @@ export default function Layout({ children }: Props) {
                                     <div className="match-items match-odds">
                                       <div className="match-items-left">
                                         <div className="cont">
-                                          <span>Total odds</span>
+                                          <span>Total des cotes</span>
                                         </div>
                                       </div>
                                       <div className="match-items-right">
@@ -1549,7 +1549,7 @@ export default function Layout({ children }: Props) {
                               </div>
                               <div className="combo-footer">
                                 <Link href="#0" className="cmn--btn">
-                                  <span> Placer un paris</span>
+                                  <span> Placer un pari</span>
                                 </Link>
                               </div>
                             </div>
