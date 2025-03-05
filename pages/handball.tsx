@@ -15,98 +15,105 @@ interface matchInterface {
    }
 }
 const matchData = [
-   {
-      "Today": [{
-         id: 1,
-         img: '/img/table/suppur-liga.png',
-         title: 'Mixed Martial Arts. KSW',
-         team1: { name: 'Cornell Big Red', img: '/img/table/mks.png' },
-         team2: { name: 'Harvard Crimson', img: '' }
+  {
+    Aujourdhui: [
+      {
+        id: 1,
+        img: "/img/table/suppur-liga.png",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "Cornell Big Red", img: "/img/table/mks.png" },
+        team2: { name: "Harvard Crimson", img: "" },
       },
       {
-         id: 2,
-         img: '',
-         title: 'Mixed Martial Arts. KSW',
-         team2: { name: 'Rutgers Scarlet Knights', img: '/img/table/naerbo.png' },
-         team1: { name: 'Nebraska Cornhuskers', img: '' }
+        id: 2,
+        img: "",
+        title: "Mixed Martial Arts. KSW",
+        team2: {
+          name: "Rutgers Scarlet Knights",
+          img: "/img/table/naerbo.png",
+        },
+        team1: { name: "Nebraska Cornhuskers", img: "" },
       },
       {
-         id: 3,
-         img: '',
-         title: 'Mixed Martial Arts. KSW',
-         team1: { name: 'Hamilton Tiger Cats', img: '/img/table/rc-trimo.png' },
-         team2: { name: 'Saskatchewan', img: '/img/table/ribnica.png' }
+        id: 3,
+        img: "",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "Hamilton Tiger Cats", img: "/img/table/rc-trimo.png" },
+        team2: { name: "Saskatchewan", img: "/img/table/ribnica.png" },
       },
       {
-         id: 4,
-         img: '',
-         title: 'Mixed Martial Arts. KSW',
-         team1: { name: 'Memphis Tigers', img: '' },
-         team2: { name: 'Houston Cougars', img: '/img/table/handbold.png' }
+        id: 4,
+        img: "",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "Memphis Tigers", img: "" },
+        team2: { name: "Houston Cougars", img: "/img/table/handbold.png" },
       },
       {
-         id: 5,
-         img: '',
-         title: 'Mixed Martial Arts. KSW',
-         team1: { name: 'Nevada Wolf Pack', img: '' },
-         team2: { name: 'Colorado St. Rams', img: '' }
+        id: 5,
+        img: "",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "Nevada Wolf Pack", img: "" },
+        team2: { name: "Colorado St. Rams", img: "" },
       },
-      ]
-   },
-   {
-      "Tomorrow": [
-         {
-            id: 6,
-            img: '/img/table/freemad.png',
-            title: 'Mixed Martial Arts. KSW',
-            team1: { name: 'San Jose St. Spartans', img: '/img/table/sydhavus.png' },
-            team2: { name: 'UNLV Rebels', img: '/img/table/ajax.png' }
-         },
-         {
-            id: 7,
-            img: '/img/table/bruges333.png',
-            title: 'Mixed Martial Arts. KSW',
-            team1: { name: 'Indiana Hossiars', img: '/img/table/petra.png' },
-            team2: { name: 'Michigan Wolverines', img: '' }
-         },
-         {
-            id: 8,
-            img: '/img/table/bruges333.png',
-            title: 'Mixed Martial Arts. KSW',
-            team1: { name: 'Florida Gators', img: '/img/table/bruges333.png' },
-            team2: { name: 'Missouri Tigers', img: '' }
-         },
-         {
-            id: 9,
-            img: '/img/table/olis.png',
-            title: 'Mixed Martial Arts. KSW',
-            team1: { name: 'Oklahoma Sooners', img: '/img/table/valence33.png' },
-            team2: { name: 'Texas Longhorns', img: '' }
-         },
-         {
-            id: 10,
-            img: '',
-            title: 'Mixed Martial Arts. KSW',
-            team1: { name: 'Kansas Jayhawks', img: '' },
-            team2: { name: 'TCU Horned Frogs', img: '' }
-         },
-         {
-            id: 11,
-            img: '',
-            title: 'Mixed Martial Arts. KSW',
-            team1: { name: 'Pittsburgh Panthers', img: '/img/table/ifk.png' },
-            team2: { name: 'Verginia Tech Hockies', img: '/img/table/alk.png' }
-         },
-         {
-            id: 12,
-            img: '',
-            title: 'Mixed Martial Arts. KSW',
-            team1: { name: 'UAB blazers', img: '/img/table/amo.png' },
-            team2: { name: 'Virginia Tech Hokies', img: '/img/table/hkmalmo.png' }
-         }
-      ]
-   },
-]
+    ],
+  },
+  {
+    Tomorrow: [
+      {
+        id: 6,
+        img: "/img/table/freemad.png",
+        title: "Mixed Martial Arts. KSW",
+        team1: {
+          name: "San Jose St. Spartans",
+          img: "/img/table/sydhavus.png",
+        },
+        team2: { name: "UNLV Rebels", img: "/img/table/ajax.png" },
+      },
+      {
+        id: 7,
+        img: "/img/table/bruges333.png",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "Indiana Hossiars", img: "/img/table/petra.png" },
+        team2: { name: "Michigan Wolverines", img: "" },
+      },
+      {
+        id: 8,
+        img: "/img/table/bruges333.png",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "Florida Gators", img: "/img/table/bruges333.png" },
+        team2: { name: "Missouri Tigers", img: "" },
+      },
+      {
+        id: 9,
+        img: "/img/table/olis.png",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "Oklahoma Sooners", img: "/img/table/valence33.png" },
+        team2: { name: "Texas Longhorns", img: "" },
+      },
+      {
+        id: 10,
+        img: "",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "Kansas Jayhawks", img: "" },
+        team2: { name: "TCU Horned Frogs", img: "" },
+      },
+      {
+        id: 11,
+        img: "",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "Pittsburgh Panthers", img: "/img/table/ifk.png" },
+        team2: { name: "Verginia Tech Hockies", img: "/img/table/alk.png" },
+      },
+      {
+        id: 12,
+        img: "",
+        title: "Mixed Martial Arts. KSW",
+        team1: { name: "UAB blazers", img: "/img/table/amo.png" },
+        team2: { name: "Virginia Tech Hokies", img: "/img/table/hkmalmo.png" },
+      },
+    ],
+  },
+];
 const handball = () => {
    return (
       <>

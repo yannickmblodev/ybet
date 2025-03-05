@@ -15,183 +15,189 @@ interface matchInterface {
    }
 }
 const matchData = [
-   {
-      "Tommorrow": [{
-         id: 1,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team1: { name: 'Cornell Big Red', img: '' },
-         team2: { name: 'Harvard Crimson', img: '/img/table/argentina.png' }
+  {
+    Demain: [
+      {
+        id: 1,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Cornell Big Red", img: "" },
+        team2: { name: "Harvard Crimson", img: "/img/table/argentina.png" },
       },
       {
-         id: 2,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team2: { name: 'Rutgers Scarlet Knights', img: '/img/table/cesarus.png' },
-         team1: { name: 'Nebraska Cornhuskers', img: '/img/table/armenta.png' }
+        id: 2,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team2: {
+          name: "Rutgers Scarlet Knights",
+          img: "/img/table/cesarus.png",
+        },
+        team1: { name: "Nebraska Cornhuskers", img: "/img/table/armenta.png" },
       },
       {
-         id: 3,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team1: { name: 'Hamilton Tiger Cats', img: '' },
-         team2: { name: 'Saskatchewan', img: '/img/table/murray.png' }
+        id: 3,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Hamilton Tiger Cats", img: "" },
+        team2: { name: "Saskatchewan", img: "/img/table/murray.png" },
       },
       {
-         id: 4,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team1: { name: 'Memphis Tigers', img: '/img/table/cesarus.png' },
-         team2: { name: 'Houston Cougars', img: '' }
+        id: 4,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Memphis Tigers", img: "/img/table/cesarus.png" },
+        team2: { name: "Houston Cougars", img: "" },
       },
       {
-         id: 5,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team1: { name: 'Nevada Wolf Pack', img: '/img/table/argentina.png' },
-         team2: { name: 'Colorado St. Rams', img: '/img/table/murray.png' }
+        id: 5,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Nevada Wolf Pack", img: "/img/table/argentina.png" },
+        team2: { name: "Colorado St. Rams", img: "/img/table/murray.png" },
       },
       {
-         id: 6,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team1: { name: 'San Jose St. Spartans', img: '' },
-         team2: { name: 'UNLV Rebels', img: '' }
+        id: 6,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "San Jose St. Spartans", img: "" },
+        team2: { name: "UNLV Rebels", img: "" },
       },
       {
-         id: 7,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team1: { name: 'Indiana Hossiars', img: '/img/table/j-man.png' },
-         team2: { name: 'Michigan Wolverines', img: '/img/table/armenta.png' }
+        id: 7,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Indiana Hossiars", img: "/img/table/j-man.png" },
+        team2: { name: "Michigan Wolverines", img: "/img/table/armenta.png" },
       },
       {
-         id: 8,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team1: { name: 'Florida Gators', img: '/img/table/j-man.png' },
-         team2: { name: 'Missouri Tigers', img: '' }
+        id: 8,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Florida Gators", img: "/img/table/j-man.png" },
+        team2: { name: "Missouri Tigers", img: "" },
       },
       {
-         id: 9,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team1: { name: 'Oklahoma Sooners', img: '' },
-         team2: { name: 'Texas Longhorns', img: '' }
+        id: 9,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Oklahoma Sooners", img: "" },
+        team2: { name: "Texas Longhorns", img: "" },
       },
       {
-         id: 10,
-         img: '/img/table/boxings.png',
-         title: 'Boxing',
-         team1: { name: 'Kansas Jayhawks', img: '/img/table/argentina.png' },
-         team2: { name: 'TCU Horned Frogs', img: '' }
-      }
-      ]
-   },
-   {
-      "Prematch 16.10.2023": [
-         {
-            id: 11,
-            img: '/img/table/boxings.png',
-            title: 'Boxing',
-            team1: { name: 'Pittsburgh Panthers', img: '/img/table/cesarus.png' },
-            team2: { name: 'Verginia Tech Hockies', img: '/img/table/mairena.png' }
-         },
-         {
-            id: 12,
-            img: '/img/table/boxings.png',
-            title: 'Boxing',
-            team1: { name: 'UAB blazers', img: '/img/table/cesarus.png' },
-            team2: { name: 'Virginia Tech Hokies', img: '' }
-         },
-         {
-            id: 13,
-            img: '/img/table/boxings.png',
-            title: 'Boxing',
-            team1: { name: 'Tulane Green Wave', img: '/img/table/murray.png' },
-            team2: { name: 'East Carolina Pirates', img: '' }
-         }, {
-            id: 14,
-            img: '/img/table/boxings.png',
-            title: 'Boxing Fight Night',
-            team1: { name: 'Tulane Green Waves', img: '' },
-            team2: { name: 'Toledo Rockets', img: '/img/table/mairena.png' }
-         },
-      ]
-   },
-   {
-      "Prematch 18.10.2023": [,
-         {
-            id: 15,
-            img: '/img/table/boxings.png',
-            title: 'Boxing Fight Night',
-            team1: { name: 'Carolina Panthers', img: '/img/table/carolina.png' },
-            team2: { name: 'San Francisco Tigers', img: '/img/table/sfsan.png' }
-         },
-         {
-            id: 16,
-            img: '/img/table/boxings.png',
-            title: 'Boxing Fight Night',
-            team1: { name: 'Los Angeles Rams', img: '/img/table/la.png' },
-            team2: { name: 'Dallas Cowboys', img: '/img/table/dallas.png' }
-         },
-         {
-            id: 17,
-            img: '/img/table/boxings.png',
-            title: 'Boxing Fight Night',
-            team1: { name: 'Arizona Cardinals', img: '/img/table/arizona.png' },
-            team2: { name: 'Dallas Cowboys', img: '/img/table/philadelphia.png' }
-         },
-         {
-            id: 18,
-            img: '/img/table/boxings.png',
-            title: 'Boxing Fight Night',
-            team1: { name: 'Baltimore Ravens', img: '/img/table/ravens-b.png' },
-            team2: { name: 'Cincinnati Bengals', img: '/img/table/b.png' }
-         }
-      ]
-   },
-   {
-      "Prematch 20.10.2023": [
-         {
-            id: 19,
-            img: '/img/table/boxings.png',
-            title: 'Boxing Fight Night',
-            team1: { name: 'Kansas City Chiefs', img: '/img/table/carolina.png' },
-            team2: { name: 'Las Vegas Raiders', img: '/img/table/sfsan.png' }
-         }
-      ]
-   },
-   {
-      "Prematch 22.10.2023": [
-         {
-            id: 20,
-            img: '/img/table/boxings.png',
-            title: 'Boxing Fight Night',
-            team1: { name: 'Chicago Bears', img: '/img/table/pepe.png' },
-            team2: { name: 'Washigton Commanders', img: '/img/table/w.png' }
-         }
-      ]
-   },
-   {
-      "Prematch 24.10.2023": [
-         {
-            id: 21,
-            img: '/img/table/boxings.png',
-            title: 'Boxing Fight Night',
-            team1: { name: 'Miami Dolphins', img: '/img/table/dolphin.png' },
-            team2: { name: 'Minnesota Vikings', img: '/img/table/minners.png' }
-         },
-         {
-            id: 22,
-            img: '/img/table/boxings.png',
-            title: 'Boxing Fight Night',
-            team1: { name: 'Pittsburgh Steelers', img: '/img/table/steelers.png' },
-            team2: { name: 'Tampa Bay Buccaneers', img: '/img/table/buccanee.png' }
-         },
-      ]
-   },
-]
+        id: 10,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Kansas Jayhawks", img: "/img/table/argentina.png" },
+        team2: { name: "TCU Horned Frogs", img: "" },
+      },
+    ],
+  },
+  {
+    "Prematch 16.10.2023": [
+      {
+        id: 11,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Pittsburgh Panthers", img: "/img/table/cesarus.png" },
+        team2: { name: "Verginia Tech Hockies", img: "/img/table/mairena.png" },
+      },
+      {
+        id: 12,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "UAB blazers", img: "/img/table/cesarus.png" },
+        team2: { name: "Virginia Tech Hokies", img: "" },
+      },
+      {
+        id: 13,
+        img: "/img/table/boxings.png",
+        title: "Boxing",
+        team1: { name: "Tulane Green Wave", img: "/img/table/murray.png" },
+        team2: { name: "East Carolina Pirates", img: "" },
+      },
+      {
+        id: 14,
+        img: "/img/table/boxings.png",
+        title: "Boxing Fight Night",
+        team1: { name: "Tulane Green Waves", img: "" },
+        team2: { name: "Toledo Rockets", img: "/img/table/mairena.png" },
+      },
+    ],
+  },
+  {
+    "Prematch 18.10.2023": [
+      ,
+      {
+        id: 15,
+        img: "/img/table/boxings.png",
+        title: "Boxing Fight Night",
+        team1: { name: "Carolina Panthers", img: "/img/table/carolina.png" },
+        team2: { name: "San Francisco Tigers", img: "/img/table/sfsan.png" },
+      },
+      {
+        id: 16,
+        img: "/img/table/boxings.png",
+        title: "Boxing Fight Night",
+        team1: { name: "Los Angeles Rams", img: "/img/table/la.png" },
+        team2: { name: "Dallas Cowboys", img: "/img/table/dallas.png" },
+      },
+      {
+        id: 17,
+        img: "/img/table/boxings.png",
+        title: "Boxing Fight Night",
+        team1: { name: "Arizona Cardinals", img: "/img/table/arizona.png" },
+        team2: { name: "Dallas Cowboys", img: "/img/table/philadelphia.png" },
+      },
+      {
+        id: 18,
+        img: "/img/table/boxings.png",
+        title: "Boxing Fight Night",
+        team1: { name: "Baltimore Ravens", img: "/img/table/ravens-b.png" },
+        team2: { name: "Cincinnati Bengals", img: "/img/table/b.png" },
+      },
+    ],
+  },
+  {
+    "Prematch 20.10.2023": [
+      {
+        id: 19,
+        img: "/img/table/boxings.png",
+        title: "Boxing Fight Night",
+        team1: { name: "Kansas City Chiefs", img: "/img/table/carolina.png" },
+        team2: { name: "Las Vegas Raiders", img: "/img/table/sfsan.png" },
+      },
+    ],
+  },
+  {
+    "Prematch 22.10.2023": [
+      {
+        id: 20,
+        img: "/img/table/boxings.png",
+        title: "Boxing Fight Night",
+        team1: { name: "Chicago Bears", img: "/img/table/pepe.png" },
+        team2: { name: "Washigton Commanders", img: "/img/table/w.png" },
+      },
+    ],
+  },
+  {
+    "Prematch 24.10.2023": [
+      {
+        id: 21,
+        img: "/img/table/boxings.png",
+        title: "Boxing Fight Night",
+        team1: { name: "Miami Dolphins", img: "/img/table/dolphin.png" },
+        team2: { name: "Minnesota Vikings", img: "/img/table/minners.png" },
+      },
+      {
+        id: 22,
+        img: "/img/table/boxings.png",
+        title: "Boxing Fight Night",
+        team1: { name: "Pittsburgh Steelers", img: "/img/table/steelers.png" },
+        team2: { name: "Tampa Bay Buccaneers", img: "/img/table/buccanee.png" },
+      },
+    ],
+  },
+];
 
 
 const boxing = () => {

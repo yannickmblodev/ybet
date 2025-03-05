@@ -17,7 +17,7 @@ interface matchInterface {
 }
 const matchData = [
    {
-      "Today": [{
+      "Aujourdhui": [{
          id: 1,
          img: '/img/table/sky.png',
          title: 'Saturday Championship League',
@@ -166,7 +166,7 @@ const cricket = () => {
                            {/* <!--table five--> */}
                            <div className="match-table-head mt-span-7 mb-3">
                               <h3>
-                                 Live events
+                                 Evenement en Direct
                               </h3>
                            </div>
                            <div className="table-wrap mb-5">

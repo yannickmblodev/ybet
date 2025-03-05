@@ -94,122 +94,131 @@ const efootballMatchData = [
 const efootball = () => {
    const [isOpen, setOpen] = useState(false);
    return (
-      <>
-         <BreadCrumb title="Efootball" />
-         {/* <!--Breadcumnd--> */}
+     <>
+       <BreadCrumb title="Efootball" />
+       {/* <!--Breadcumnd--> */}
 
-         {/* <!--Main-body-tabing--> */}
-         <div className="main-body-tabbing ">
-            <div className="container">
-               <div className="main-tabbing">
-                  <div className="tab-content" id="tabContentmain">
-                     {/* <!--all tab start--> */}
-                     <div className="tab-pane fade show active" id="betsall" role="tabpanel">
-                        <div className="match-table">
-                           {/* <!--table five--> */}
-                           <div className="match-table-head">
-                              <h3>
-                                 Live events
-                              </h3>
+       {/* <!--Main-body-tabing--> */}
+       <div className="main-body-tabbing ">
+         <div className="container">
+           <div className="main-tabbing">
+             <div className="tab-content" id="tabContentmain">
+               {/* <!--all tab start--> */}
+               <div
+                 className="tab-pane fade show active"
+                 id="betsall"
+                 role="tabpanel"
+               >
+                 <div className="match-table">
+                   {/* <!--table five--> */}
+                   <div className="match-table-head">
+                     <h3>Evenement en Direct</h3>
+                   </div>
+                   <div className="table-wrap">
+                     {efootballMatchData.map(
+                       ({ id, img, team1, team2, title }) => (
+                         <div
+                           key={id}
+                           className="table-inner efootball-customize"
+                         >
+                           <div className="table-head">
+                             <Link href="details" className="left-compo">
+                               <span>
+                                 <i className="icon-football"></i>
+                               </span>
+                               <span className="leuge-title">{title}</span>
+                             </Link>
+                             <ul className="right-compo">
+                               <li className="dotsred">Half 2'47</li>
+                               <li>Match Winner</li>
+                               <li>Total</li>
+                             </ul>
                            </div>
-                           <div className="table-wrap">
-                              {
-                                 efootballMatchData.map(({ id, img, team1, team2, title }) => (
-                                    <div key={id} className="table-inner efootball-customize">
-                                       <div className="table-head">
-                                          <Link href="details" className="left-compo">
-                                             <span>
-                                                <i className="icon-football"></i>
-                                             </span>
-                                             <span className="leuge-title">
-                                                {title}
-                                             </span>
-                                          </Link>
-                                          <ul className="right-compo">
-                                             <li className="dotsred">
-                                                Half 2'47
-                                             </li>
-                                             <li>
-                                                Match Winner
-                                             </li>
-                                             <li>
-                                                Total
-                                             </li>
-                                          </ul>
-                                       </div>
-                                       <div className="table-body">
-                                          <div className="table-body-left ebasket-customize d-flex align-items-center justify-content-between">
-                                             <div className="ebasket-left">
-                                                <div className="items">
-                                                   <Link href="#0">
-                                                      <span className="icon">
-                                                         <i className="icon-football"></i>
-                                                      </span>
-                                                      <span>{team1}</span>
-                                                   </Link>
-                                                </div>
-                                                <div className="items">
-                                                   <Link href="#0">
-                                                      <span className="icon">
-                                                         <i className="icon-football"></i>
-                                                      </span>
-                                                      <span>{team2}</span>
-                                                   </Link>
-                                                </div>
-                                             </div>
-                                             <div className="ebasket-right-content">
-                                                <Link href="#0"><span className="blods">1</span> H1 H2</Link>
-                                                <Link href="#0">10</Link>
-                                                <Link href="#0"><span className="blods">1</span> 10</Link>
-                                             </div>
-                                          </div>
-                                          <div className="table-body-right">
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">1</span>
-                                                <span>5.05</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">X</span>
-                                                <span>7.10</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">5.4</span>
-                                                <span>5.10</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">O 1.50</span>
-                                                <span>8.02</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">U 71.5</span>
-                                                <span>1.27</span>
-                                             </Link>
-                                             <Link onClick={()=> setOpen(true)} href="#" className="table-pointing-box video-btn">
-                                                <span className="basketman">
-                                                   <img src={img} alt="img" />
-                                                </span>
-                                             </Link>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 ))
-                              }                              
+                           <div className="table-body">
+                             <div className="table-body-left ebasket-customize d-flex align-items-center justify-content-between">
+                               <div className="ebasket-left">
+                                 <div className="items">
+                                   <Link href="#0">
+                                     <span className="icon">
+                                       <i className="icon-football"></i>
+                                     </span>
+                                     <span>{team1}</span>
+                                   </Link>
+                                 </div>
+                                 <div className="items">
+                                   <Link href="#0">
+                                     <span className="icon">
+                                       <i className="icon-football"></i>
+                                     </span>
+                                     <span>{team2}</span>
+                                   </Link>
+                                 </div>
+                               </div>
+                               <div className="ebasket-right-content">
+                                 <Link href="#0">
+                                   <span className="blods">1</span> H1 H2
+                                 </Link>
+                                 <Link href="#0">10</Link>
+                                 <Link href="#0">
+                                   <span className="blods">1</span> 10
+                                 </Link>
+                               </div>
+                             </div>
+                             <div className="table-body-right">
+                               <Link href="#0" className="table-pointing-box">
+                                 <span className="list">1</span>
+                                 <span>5.05</span>
+                               </Link>
+                               <Link href="#0" className="table-pointing-box">
+                                 <span className="list">X</span>
+                                 <span>7.10</span>
+                               </Link>
+                               <Link href="#0" className="table-pointing-box">
+                                 <span className="list">5.4</span>
+                                 <span>5.10</span>
+                               </Link>
+                               <Link href="#0" className="table-pointing-box">
+                                 <span className="list">O 1.50</span>
+                                 <span>8.02</span>
+                               </Link>
+                               <Link href="#0" className="table-pointing-box">
+                                 <span className="list">U 71.5</span>
+                                 <span>1.27</span>
+                               </Link>
+                               <Link
+                                 onClick={() => setOpen(true)}
+                                 href="#"
+                                 className="table-pointing-box video-btn"
+                               >
+                                 <span className="basketman">
+                                   <img src={img} alt="img" />
+                                 </span>
+                               </Link>
+                             </div>
                            </div>
-                           {/* <!--Prematch--> */}
-
-                        </div>
-                     </div>
-                     {/* <!--all tab End--> */}
-                  </div>
+                         </div>
+                       )
+                     )}
+                   </div>
+                   {/* <!--Prematch--> */}
+                 </div>
                </div>
-            </div>
+               {/* <!--all tab End--> */}
+             </div>
+           </div>
          </div>
-         {/* <!--Main-body-tabing--> */}
+       </div>
+       {/* <!--Main-body-tabing--> */}
 
-         {/* <!--Sponsor Section--> */}
-         <Sponsor />
-         <ModalVideo channel='youtube' isOpen={isOpen} videoId="Qg6zu49kXSA" onClose={() => setOpen(false)} />
-      </>
+       {/* <!--Sponsor Section--> */}
+       <Sponsor />
+       <ModalVideo
+         channel="youtube"
+         isOpen={isOpen}
+         videoId="Qg6zu49kXSA"
+         onClose={() => setOpen(false)}
+       />
+     </>
    );
 };
 

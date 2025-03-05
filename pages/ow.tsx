@@ -15,53 +15,60 @@ interface matchInterface {
    }
 }
 const matchData = [
-   {
-      "Today": [{
-         id: 1,
-         img: '/img/table/league.png',
-         title: 'Overwatch. OWL',
-         team1: { name: 'Cornell Big Red', img: '/img/table/gx.png' },
-         team2: { name: 'Harvard Crimson', img: '/img/table/sparks.png' }
+  {
+    Aujourdhui: [
+      {
+        id: 1,
+        img: "/img/table/league.png",
+        title: "Overwatch. OWL",
+        team1: { name: "Cornell Big Red", img: "/img/table/gx.png" },
+        team2: { name: "Harvard Crimson", img: "/img/table/sparks.png" },
       },
       {
-         id: 2,
-         img: '/img/table/league.png',
-         title: 'Overwatch. OWL',
-         team2: { name: 'Rutgers Scarlet Knights', img: '/img/table/valiant.png' },
-         team1: { name: 'Nebraska Cornhuskers', img: '/img/table/dragons.png' }
+        id: 2,
+        img: "/img/table/league.png",
+        title: "Overwatch. OWL",
+        team2: {
+          name: "Rutgers Scarlet Knights",
+          img: "/img/table/valiant.png",
+        },
+        team1: { name: "Nebraska Cornhuskers", img: "/img/table/dragons.png" },
       },
       {
-         id: 3,
-         img: '/img/table/league.png',
-         title: 'Overwatch. OWL',
-         team1: { name: 'Hamilton Tiger Cats', img: '/img/table/pusion.png' },
-         team2: { name: 'Saskatchewan', img: '/img/table/chen.png' }
-      },]
-   },
-   {
-      "Today": [{
-         id: 4,
-         img: '/img/table/league.png',
-         title: 'Overwatch. OWL',
-         team1: { name: 'Atlanta Reign', img: '/img/table/gx.png' },
-         team2: { name: 'Florida Mayhem', img: '/img/table/mahem.png' }
+        id: 3,
+        img: "/img/table/league.png",
+        title: "Overwatch. OWL",
+        team1: { name: "Hamilton Tiger Cats", img: "/img/table/pusion.png" },
+        team2: { name: "Saskatchewan", img: "/img/table/chen.png" },
+      },
+    ],
+  },
+  {
+    Aujourdhui: [
+      {
+        id: 4,
+        img: "/img/table/league.png",
+        title: "Overwatch. OWL",
+        team1: { name: "Atlanta Reign", img: "/img/table/gx.png" },
+        team2: { name: "Florida Mayhem", img: "/img/table/mahem.png" },
       },
       {
-         id: 5,
-         img: '/img/table/league.png',
-         title: 'Overwatch. OWL',
-         team1: { name: 'Washington Justice', img: '/img/table/juventus.png' },
-         team2: { name: 'Los Angeles Gladiators', img: '/img/table/los.png' }
+        id: 5,
+        img: "/img/table/league.png",
+        title: "Overwatch. OWL",
+        team1: { name: "Washington Justice", img: "/img/table/juventus.png" },
+        team2: { name: "Los Angeles Gladiators", img: "/img/table/los.png" },
       },
       {
-         id: 6,
-         img: '/img/table/league.png',
-         title: 'Overwatch. OWL',
-         team1: { name: 'Houston Outlaws', img: '/img/table/hauston.png' },
-         team2: { name: 'Dallas Fuel', img: '/img/table/dallas.png' }
-      },]
-   }
-]
+        id: 6,
+        img: "/img/table/league.png",
+        title: "Overwatch. OWL",
+        team1: { name: "Houston Outlaws", img: "/img/table/hauston.png" },
+        team2: { name: "Dallas Fuel", img: "/img/table/dallas.png" },
+      },
+    ],
+  },
+];
 const ow = () => {
    return (
       <>

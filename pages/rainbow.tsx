@@ -16,116 +16,121 @@ interface matchInterface {
    }
 }
 const matchData = [
-   {
-      "Tommorrow": [{
-         id: 1,
-         img: '/img/table/rainhot.png',
-         title: 'Rainbow Six. Brasileirao',
-         team1: { name: 'Cornell Big Red', img: '/img/table/faze.png' },
-         team2: { name: 'Harvard Crimson', img: '/img/table/tropicos.png' }
+  {
+    Demain: [
+      {
+        id: 1,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Cornell Big Red", img: "/img/table/faze.png" },
+        team2: { name: "Harvard Crimson", img: "/img/table/tropicos.png" },
       },
       {
-         id: 2,
-         img: '/img/table/rainhot.png',
-         title: 'Rainbow Six. Brasileirao',
-         team2: { name: 'Rutgers Scarlet Knights', img: '/img/table/wm.png' },
-         team1: { name: 'Nebraska Cornhuskers', img: '/img/table/milan.png' }
+        id: 2,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team2: { name: "Rutgers Scarlet Knights", img: "/img/table/wm.png" },
+        team1: { name: "Nebraska Cornhuskers", img: "/img/table/milan.png" },
       },
       {
-         id: 3,
-         img: '/img/table/rainhot.png',
-         title: 'Rainbow Six. Brasileirao',
-         team1: { name: 'Hamilton Tiger Cats', img: '/img/table/barsa.png' },
-         team2: { name: 'Saskatchewan', img: '/img/table/nip.png' }
+        id: 3,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Hamilton Tiger Cats", img: "/img/table/barsa.png" },
+        team2: { name: "Saskatchewan", img: "/img/table/nip.png" },
       },
-
-      ]
-   },
-   {
-      "Prematch 16.10.2023": [{
-         id: 4,
-         img: '/img/table/rainhot.png',
-         title: 'Rainbow Six. Brasileirao',
-         team1: { name: 'Memphis Tigers', img: '/img/table/ecu.png' },
-         team2: { name: 'Houston Cougars', img: '/img/table/tulance.png' }
+    ],
+  },
+  {
+    "Prematch 16.10.2023": [
+      {
+        id: 4,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Memphis Tigers", img: "/img/table/ecu.png" },
+        team2: { name: "Houston Cougars", img: "/img/table/tulance.png" },
       },
       {
-         id: 5,
-         img: '/img/table/rainhot.png',
-         title: 'Rainbow Six. Brasileirao',
-         team1: { name: 'Nevada Wolf Pack', img: '/img/table/internaz.png' },
-         team2: { name: 'Colorado St. Rams', img: '/img/table/rangers.png' }
+        id: 5,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Nevada Wolf Pack", img: "/img/table/internaz.png" },
+        team2: { name: "Colorado St. Rams", img: "/img/table/rangers.png" },
       },
       {
-         id: 6,
-         img: '/img/table/rainhot.png',
-         title: 'Rainbow Six. Brasileirao',
-         team1: { name: 'San Jose St. Spartans', img: '/img/table/man-city.png' },
-         team2: { name: 'UNLV Rebels', img: '/img/table/compenhagen.png' }
+        id: 6,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: {
+          name: "San Jose St. Spartans",
+          img: "/img/table/man-city.png",
+        },
+        team2: { name: "UNLV Rebels", img: "/img/table/compenhagen.png" },
       },
       {
-         id: 7,
-         img: '/img/table/rainhot.png',
-         title: 'Rainbow Six. Brasileirao',
-         team1: { name: 'Indiana Hossiars', img: '/img/table/j-man.png' },
-         team2: { name: 'Michigan Wolverines', img: '/img/table/armenta.png' }
-      }
-      ]
-   },
-   {
-      "Prematch 18.10.2023": [
-         ,
-         {
-            id: 8,
-            img: '/img/table/rainhot.png',
-            title: 'Rainbow Six. Brasileirao',
-            team1: { name: 'Florida Gators', img: '/img/table/j-man.png' },
-            team2: { name: 'Missouri Tigers', img: '/img/table/sevilla.png' }
-         },
-         {
-            id: 9,
-            img: '/img/table/rainhot.png',
-            title: 'Rainbow Six. Brasileirao',
-            team1: { name: 'Oklahoma Sooners', img: '/img/table/dortmund.png' },
-            team2: { name: 'Texas Longhorns', img: '/img/table/barsa.png' }
-         },
-
-      ]
-   },
-   {
-      "Prematch 20.10.2023": [
-         {
-            id: 10,
-            img: '/img/table/rainhot.png',
-            title: 'Rainbow Six. Brasileirao',
-            team1: { name: 'Kansas Jayhawks', img: '/img/table/man-city.png' },
-            team2: { name: 'TCU Horned Frogs', img: '/img/table/juventus.png' }
-         },
-         {
-            id: 11,
-            img: '/img/table/rainhot.png',
-            title: 'Rainbow Six. Brasileirao',
-            team1: { name: 'Pittsburgh Panthers', img: '/img/table/chelsea.png' },
-            team2: { name: 'Verginia Tech Hockies', img: '/img/table/juventus.png' }
-         },
-         {
-            id: 12,
-            img: '/img/table/rainhot.png',
-            title: 'Rainbow Six. Brasileirao',
-            team1: { name: 'UAB blazers', img: '/img/table/cesarus.png' },
-            team2: { name: 'Virginia Tech Hokies', img: '/img/table/haifa.png' }
-         },
-         {
-            id: 13,
-            img: '/img/table/rainhot.png',
-            title: 'Rainbow Six. Brasileirao',
-            team1: { name: 'Tulane Green Wave', img: '/img/table/murray.png' },
-            team2: { name: 'East Carolina Pirates', img: '/img/table/chelsea.png' }
-         },
-      ]
-   },
-
-]
+        id: 7,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Indiana Hossiars", img: "/img/table/j-man.png" },
+        team2: { name: "Michigan Wolverines", img: "/img/table/armenta.png" },
+      },
+    ],
+  },
+  {
+    "Prematch 18.10.2023": [
+      ,
+      {
+        id: 8,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Florida Gators", img: "/img/table/j-man.png" },
+        team2: { name: "Missouri Tigers", img: "/img/table/sevilla.png" },
+      },
+      {
+        id: 9,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Oklahoma Sooners", img: "/img/table/dortmund.png" },
+        team2: { name: "Texas Longhorns", img: "/img/table/barsa.png" },
+      },
+    ],
+  },
+  {
+    "Prematch 20.10.2023": [
+      {
+        id: 10,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Kansas Jayhawks", img: "/img/table/man-city.png" },
+        team2: { name: "TCU Horned Frogs", img: "/img/table/juventus.png" },
+      },
+      {
+        id: 11,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Pittsburgh Panthers", img: "/img/table/chelsea.png" },
+        team2: {
+          name: "Verginia Tech Hockies",
+          img: "/img/table/juventus.png",
+        },
+      },
+      {
+        id: 12,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "UAB blazers", img: "/img/table/cesarus.png" },
+        team2: { name: "Virginia Tech Hokies", img: "/img/table/haifa.png" },
+      },
+      {
+        id: 13,
+        img: "/img/table/rainhot.png",
+        title: "Rainbow Six. Brasileirao",
+        team1: { name: "Tulane Green Wave", img: "/img/table/murray.png" },
+        team2: { name: "East Carolina Pirates", img: "/img/table/chelsea.png" },
+      },
+    ],
+  },
+];
 
 const rainbow = () => {
    return (

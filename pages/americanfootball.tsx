@@ -17,7 +17,7 @@ interface matchInterface {
 }
 const matchData = [
    {
-      "Tommorrow": [{
+      "Demain": [{
          id: 1,
          img: '/img/table/ncaa.png',
          title: 'Mixed Martial Arts. KSW',

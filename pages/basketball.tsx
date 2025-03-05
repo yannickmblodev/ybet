@@ -17,7 +17,7 @@ interface matchInterface {
 }
 const matchData = [
   {
-    Today: [
+    Ajourdhui: [
       {
         id: 1,
         img: "/img/table/csgo2.png",

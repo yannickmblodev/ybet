@@ -97,114 +97,107 @@ const liveEvents = [
 
 const tabletennis = () => {
    return (
-      <>
-         <BreadCrumb title="Table Tennis" />
-         {/* <!--Breadcumnd--> */}
+     <>
+       <BreadCrumb title="Table Tennis" />
+       {/* <!--Breadcumnd--> */}
 
-         {/* <!--Main-body-tabing--> */}
-         <div className="main-body-tabbing">
-            <div className="container">
-               <div className="main-tabbing">
-                  <div className="tab-content" id="tabContentmain">
-                     {/* <!--all tab start--> */}
-                     <div className="tab-pane fade show active" id="betsall" role="tabpanel">
-                        <div className="match-table">
-                           {/* <!--table five--> */}
-                           <div className="match-table-head mt-span-7 mb-3">
-                              <h3>
-                                 Today
-                              </h3>
+       {/* <!--Main-body-tabing--> */}
+       <div className="main-body-tabbing">
+         <div className="container">
+           <div className="main-tabbing">
+             <div className="tab-content" id="tabContentmain">
+               {/* <!--all tab start--> */}
+               <div
+                 className="tab-pane fade show active"
+                 id="betsall"
+                 role="tabpanel"
+               >
+                 <div className="match-table">
+                   {/* <!--table five--> */}
+                   <div className="match-table-head mt-span-7 mb-3">
+                     <h3>Aujourdhui</h3>
+                   </div>
+                   <div className="table-wrap">
+                     {liveEvents.map(({ id, team1, team2, title, img }) => (
+                       <div key={id} className="table-inner">
+                         <div className="table-head">
+                           <Link href="details" className="left-compo">
+                             <span>
+                               <img src={img} alt="icon" />
+                             </span>
+                             <span>{title}</span>
+                           </Link>
+                           <ul className="right-compo">
+                             <li>Oct 21 00:45</li>
+                             <li>Match Winner</li>
+                             <li>Total</li>
+                           </ul>
+                         </div>
+                         <div className="table-body">
+                           <ul className="table-body-left">
+                             <li>
+                               <Link href="#0">
+                                 <span>{team1.name}</span>
+                                 <span className="icon">
+                                   <img src={team1.img} alt="flag" />
+                                 </span>
+                               </Link>
+                             </li>
+                             <li>
+                               <Link href="#0" className="vs">
+                                 VS
+                               </Link>
+                             </li>
+                             <li>
+                               <Link href="#0">
+                                 <span className="icon">
+                                   <img src={team2.img} alt="flag" />
+                                 </span>
+                                 <span>{team2.name}</span>
+                               </Link>
+                             </li>
+                           </ul>
+                           <div className="table-body-right">
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">1</span>
+                               <span>2.08</span>
+                             </Link>
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">X</span>
+                               <span>2.08</span>
+                             </Link>
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">2</span>
+                               <span>2.08</span>
+                             </Link>
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">O 2.5</span>
+                               <span>2.08</span>
+                             </Link>
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">U 2.5</span>
+                               <span>2.08</span>
+                             </Link>
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="last-digit">+327</span>
+                             </Link>
                            </div>
-                           <div className="table-wrap">
-                              {
-                                 liveEvents.map(({ id, team1, team2, title, img }) => (
-                                    <div key={id} className="table-inner">
-                                       <div className="table-head">
-                                          <Link href="details" className="left-compo">
-                                             <span>
-                                                <img src={img} alt="icon" />
-                                             </span>
-                                             <span>{title}</span>
-                                          </Link>
-                                          <ul className="right-compo">
-                                             <li>
-                                                Oct 21 00:45
-                                             </li>
-                                             <li>
-                                                Match Winner
-                                             </li>
-                                             <li>
-                                                Total
-                                             </li>
-                                          </ul>
-                                       </div>
-                                       <div className="table-body">
-                                          <ul className="table-body-left">
-                                             <li>
-                                                <Link href="#0">
-                                                   <span>{team1.name}</span>
-                                                   <span className="icon">
-                                                      <img src={team1.img} alt="flag" />
-                                                   </span>
-                                                </Link>
-                                             </li>
-                                             <li>
-                                                <Link href="#0" className="vs">
-                                                   VS
-                                                </Link>
-                                             </li>
-                                             <li>
-                                                <Link href="#0">
-                                                   <span className="icon">
-                                                      <img src={team2.img} alt="flag" />
-                                                   </span>
-                                                   <span>{team2.name}</span>
-                                                </Link>
-                                             </li>
-                                          </ul>
-                                          <div className="table-body-right">
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">1</span>
-                                                <span>2.08</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">X</span>
-                                                <span>2.08</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">2</span>
-                                                <span>2.08</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">O 2.5</span>
-                                                <span>2.08</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">U 2.5</span>
-                                                <span>2.08</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="last-digit">+327</span>
-                                             </Link>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 ))
-                              }
-                           </div>
-
-                        </div>
-                     </div>
-                     {/* <!--all tab End--> */}
-                  </div>
+                         </div>
+                       </div>
+                     ))}
+                   </div>
+                 </div>
                </div>
-            </div>
+               {/* <!--all tab End--> */}
+             </div>
+           </div>
          </div>
-         {/* <!--Main-body-tabing--> */}
+       </div>
+       {/* <!--Main-body-tabing--> */}
 
-         {/* <!--Sponsor Section--> */}
-         <Sponsor />
-      </>
+       {/* <!--Sponsor Section--> */}
+       <Sponsor />
+     </>
    );
 };
 

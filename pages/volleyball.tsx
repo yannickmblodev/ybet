@@ -1,267 +1,333 @@
 import Link from 'next/link';
 import BreadCrumb from '@/components/BreadCrumb';
+import { ebasketballdata } from '@/data/ebasketball';
 import Sponsor from '@/components/Sponsor';
-
-const matchData = [
-  {
-    id: 1,
-    title: "Championnat du monde. Les femmes",
-    img: "",
-    team1: { name: "Colombia", img: "" },
-    team2: { name: "Peru", img: "" },
-  },
-  {
-    id: 2,
-    title: "South American Championship",
-    img: "",
-    team1: { name: "Colombia", img: "" },
-    team2: { name: "Peru", img: "" },
-  },
-  {
-    id: 3,
-    title: "Championship of the Czech Republic, Extr...",
-    img: "",
-    team1: { name: "Pribram", img: "/img/table/pebro.png" },
-    team2: { name: "Kladno", img: "/img/table/kladno.png" },
-  },
-  {
-    id: 4,
-    title: "Championship of France. League A",
-    img: "",
-    team1: { name: "Narbonne", img: "" },
-    team2: { name: "Tourcoing lille", img: "" },
-  },
-  {
-    id: 5,
-    title: "Championship of France. League A",
-    img: "",
-    team1: { name: "Set", img: "" },
-    team2: { name: "Nantes", img: "" },
-  },
-  {
-    id: 6,
-    title: "Championship of Finland. Korisliiga",
-    img: "",
-    team1: { name: "Caloocan Excellence", img: "" },
-    team2: { name: "Muntinlupa Cagers", img: "" },
-  },
-  {
-    id: 7,
-    title: "World Championship. Women",
-    img: "/img/table/korislinga.png",
-    team1: { name: "Kataja", img: "/img/table/kataja.png" },
-    team2: { name: "Puerto Rico", img: "/img/table/ktp.png" },
-  },
-  {
-    id: 8,
-    title: "Swedish Championship",
-    img: "",
-    team1: { name: "Uppsala Basket", img: "/img/table/uppsala.png" },
-    team2: { name: "BC lulea", img: "/img/table/lulea.png" },
-  },
-];
-type LiveEventProps = {
-   title: string;
-   team1: string;
-   team2: string;
- }
- 
-const LiveEvent = ({title, team1, team2}:LiveEventProps) => {
-   return (
-      <div className="table-inner">
-         <div className="table-head">
-            <Link href="details" className="left-compo">
-               <span>
-                  <i className="icon-volleyball"></i>
-               </span>
-               <span>{title}</span>
-            </Link>
-            <ul className="right-compo">
-               <li className="dotsred">
-                  Set 4
-               </li>
-               <li>
-                  Match Winner
-               </li>
-               <li>
-                  Total
-               </li>
-            </ul>
-         </div>
-         <div className="table-body">
-            <div className="table-body-left ebasket-customize d-flex align-items-center justify-content-between">
-               <div className="ebasket-left">
-                  <div className="items">
-                     <Link href="#0">
-                        <span className="icon">
-                           <i className="icon-volleyball"></i>
-                        </span>
-                        <span>{team1}</span>
-                     </Link>
-                  </div>
-                  <div className="items">
-                     <Link href="#0">
-                        <span className="icon">
-                           <i className="icon-volleyball"></i>
-                        </span>
-                        <span>{team2}</span>
-                     </Link>
-                  </div>
-               </div>
-               <div className="ebasket-right-content">
-                  <Link href="#0"><span className="blods">2</span>  S1 S2 S3 S4</Link>
-                  <Link href="#0">25 25 23 10</Link>
-                  <Link href="#0"><span className="blods">1</span> 20 15 25 6</Link>
-               </div>
-            </div>
-            <div className="table-body-right">
-               <Link href="#0" className="table-pointing-box">
-                  <span className="list">2</span>
-                  <span>05.05</span>
-               </Link>
-               <Link href="#0" className="table-pointing-box">
-                  <span className="list">O 1.50</span>
-                  <span>8.02</span>
-               </Link>
-               <Link href="#0" className="table-pointing-box">
-                  <span className="list">U 71.5</span>
-                  <span>1.27</span>
-               </Link>
-               <Link href="#0" className="table-pointing-box">
-                  <span className="last-digit">+95</span>
-               </Link>
-            </div>
-         </div>
-      </div>
-   )
-}
+const liveEvents = [
+   {
+      id: 1,
+      title: 'League Nations UEFA🔥',
+      img: '/img/table/l-flag.png',
+      team1: { name: 'Scotland', img: "/img/table/scotland.png" },
+      team2: { name: 'Ukraine', img: "/img/table/ukraine.png" },
+   },
+   {
+      id: 2,
+      title: 'League Nations UEFA🔥',
+      img: '/img/table/l-flag.png',
+      team1: { name: 'Belguim', img: "/img/table/belgium.png" },
+      team2: { name: 'Walse', img: "/img/table/wales.png" },
+   },
+   {
+      id: 3,
+      title: 'League Nations UEFA🔥',
+      img: '/img/table/atp2.png',
+      team1: { name: 'Croatia', img: "/img/table/croatia.png" },
+      team2: { name: 'Denmark', img: "/img/table/denmark.png" },
+   },
+   {
+      id: 4,
+      title: 'ATP Lisbon',
+      img: '/img/table/l-flag.png',
+      team1: { name: 'Van Assche Luca', img: "/img/table/luca.png" },
+      team2: { name: 'Cecchinato', img: "/img/table/marco.png" },
+   },
+   {
+      id: 5,
+      title: 'USA. Pro Series. Women',
+      img: '/img/table/l-flag.png',
+      team1: { name: 'Odorizzi Caterina', img: "/img/table/croatia.png" },
+      team2: { name: 'Kostova Elitsa', img: "/img/table/ilitsa.png" },
+   },
+   {
+      id: 6,
+      title: 'USA. Pro Series. Women',
+      img: '/img/table/l-flag.png',
+      team1: { name: 'Estonia', img: "/img/table/estonia.png" },
+      team2: { name: 'Sevila', img: "/img/table/sevilla.png" },
+   },
+   {
+      id: 7,
+      title: 'League Nations UEFA🔥',
+      img: '/img/table/l-flag.png',
+      team1: { name: 'Scotland', img: "/img/table/scotland.png" },
+      team2: { name: 'Ukraine', img: "/img/table/ukraine.png" },
+   },
+   {
+      id: 8,
+      title: 'League Nations UEFA🔥',
+      img: '/img/table/l-flag.png',
+      team1: { name: 'Scotland', img: "/img/table/scotland.png" },
+      team2: { name: 'Ukraine', img: "/img/table/ukraine.png" },
+   },
+]
 const volleyball = () => {
-   return (
-      <>
-         <BreadCrumb title='Volleyball' />
-         <div className="main-body-tabbing">
-            <div className="container">
-               <div className="main-tabbing">
-                  <div className="tab-content" id="tabContentmain">
-                     {/* <!--all tab start--> */}
-                     <div className="tab-pane fade show active" id="betsall" role="tabpanel">
-                        <div className="match-table">
-                           {/* <!--table five--> */}
-                           <div className="match-table-head mt-span-7 mb-4">
-                              <h3>
-                                 Live events
-                              </h3>
-                           </div>
-                           <div className="table-wrap mb-2">
-                              <LiveEvent title="Vietnam Youth Cup" team1='Trang An Ninh Binh-2' team2='Ho Chi Minh-2' />
-                              <LiveEvent title="Vietnam Youth Cup" team1='Trang An Ninh Binh-2' team2='Ho Chi Minh-2' />
-                           </div>
+  return (
+    <>
+      <BreadCrumb title="Tennis" />
+      {/* <!--Breadcumnd--> */}
 
-                           <div className="match-table-head pt-20">
-                              <h3 className="tody-space">
-                                 Today
-                              </h3>
-                           </div>
-                           <div className="table-wrap mb-5">
-                              {
-                                 matchData.map(({ id, title, img, team1, team2 }) => (
-                                    <div key={id} className="table-inner">
-                                       <div className="table-head">
-                                          <Link href="details" className="left-compo">
-                                             <span>
-                                                {img ? <img src={img} alt='img' /> : <i className="icon-volleyball"></i>}
-                                             </span>
-                                             <span>{title} </span>
-                                          </Link>
-                                          <ul className="right-compo">
-                                             <li>
-                                                18:00
-                                             </li>
-                                             <li>
-                                                Match Winner
-                                             </li>
-                                             <li>
-                                                Total maps
-                                             </li>
-                                          </ul>
-                                       </div>
-                                       <div className="table-body">
-                                          <ul className="table-body-left">
-                                             <li>
-                                                <Link href="#0">
-                                                   <span>{team1.name}</span>
-                                                   <span className="icon">
-                                                      {img ? <img src={team1.img} alt='img' /> : <i className="icon-volleyball"></i>}
-                                                   </span>
-                                                </Link>
-                                             </li>
-                                             <li>
-                                                <Link href="#0" className="vs">
-                                                   VS
-                                                </Link>
-                                             </li>
-                                             <li>
-                                                <Link href="#0">
-                                                   <span className="icon">
-                                                      {img ? <img src={team2.img} alt='img' /> : <i className="icon-volleyball"></i>}
-                                                   </span>
-                                                   <span>{team2.name}</span>
-                                                </Link>
-                                             </li>
-                                          </ul>
-                                          <div className="table-body-right">
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">1</span>
-                                                <span>1.70</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">X</span>
-                                                <span>3.5</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">2</span>
-                                                <span>2.98</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">O 2.5</span>
-                                                <span>1.84</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">U 2.5</span>
-                                                <span>5.7</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="last-digit">+17</span>
-                                             </Link>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 ))
-                              }
-                           </div>
-                           {/* <!--Prematch--> */}
-                           <div className="match-table-head mt-span-7 mb-4">
-                              <h3>
-                                 Tomorrow
-                              </h3>
-                           </div>
-                           <div className="table-wrap mb-2">
-                            <LiveEvent title='World Championship. Women' team1='Colombia' team2='Peru' />
-                            <LiveEvent title='Championship of the Czech Republic, Extr...' team1='Pribram' team2='Kladno' />
-                           </div>
-                           {/* <!--tommorw--> */}
-
-                        </div>
-                     </div>
-                     {/* <!--all tab End--> */}
+      {/* <!--Main-body-tabing--> */}
+      <div className="main-body-tabbing">
+        <div className="container">
+          <div className="main-tabbing">
+            <div className="tab-content" id="tabContentmain">
+              {/* <!--all tab start--> */}
+              <div
+                className="tab-pane fade show active"
+                id="betsall"
+                role="tabpanel"
+              >
+                <div className="match-table">
+                  {/* <!--table five--> */}
+                  <div className="match-table-head mt-span-7 mb-3">
+                    <h3>Evenement en Direct</h3>
                   </div>
-               </div>
-            </div>
-         </div>
-         {/* Sponsor Section */}
-         <Sponsor />
-      </>
-   );
-};
+                  <div className="table-wrap mb-2">
+                    {liveEvents.map(({ id, img, team1, team2, title }) => (
+                      <div key={id} className="table-inner">
+                        <div className="table-head">
+                          <Link href="details" className="left-compo">
+                            <span>
+                              <img src={img} alt="icon" />
+                            </span>
+                            <span>{title} </span>
+                          </Link>
+                          <ul className="right-compo">
+                            <li>Oct 21 00:45</li>
+                            <li>Match Winner</li>
+                            <li>Total</li>
+                          </ul>
+                        </div>
+                        <div className="table-body">
+                          <ul className="table-body-left">
+                            <li>
+                              <Link href="#0">
+                                <span>{team1.name}</span>
+                                <span className="icon">
+                                  <img src={team1.img} alt="flag" />
+                                </span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="#0" className="vs">
+                                VS
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="#0">
+                                <span className="icon">
+                                  <img src={team2.img} alt="flag" />
+                                </span>
+                                <span>{team2.name}</span>
+                              </Link>
+                            </li>
+                          </ul>
+                          <div className="table-body-right">
+                            <Link href="#0" className="table-pointing-box">
+                              <span className="list">1</span>
+                              <span>2.08</span>
+                            </Link>
+                            <Link href="#0" className="table-pointing-box">
+                              <span className="list">X</span>
+                              <span>2.08</span>
+                            </Link>
+                            <Link href="#0" className="table-pointing-box">
+                              <span className="list">2</span>
+                              <span>2.08</span>
+                            </Link>
+                            <Link href="#0" className="table-pointing-box">
+                              <span className="list">O 2.5</span>
+                              <span>2.08</span>
+                            </Link>
+                            <Link href="#0" className="table-pointing-box">
+                              <span className="list">U 2.5</span>
+                              <span>2.08</span>
+                            </Link>
+                            <Link href="#0" className="table-pointing-box">
+                              <span className="last-digit">+327</span>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
 
-export default volleyball;
+                    {/* Basketball data */}
+                    {ebasketballdata.map(
+                      ({
+                        id,
+                        img,
+                        quarter,
+                        team1,
+                        team2,
+                        title,
+                        total,
+                        winner,
+                      }) => (
+                        <div key={id} className="table-inner">
+                          <div className="table-head">
+                            <Link href="details" className="left-compo">
+                              <span>
+                                <img src={img} alt="flag" />
+                              </span>
+                              <span>{title}</span>
+                            </Link>
+                            <ul className="right-compo">
+                              <li className="dotsred">Quarter 3 '18</li>
+                              <li>Winner. Main time</li>
+                              <li>Total. Quarter 3</li>
+                            </ul>
+                          </div>
+                          <div className="table-body">
+                            <div className="table-body-left ebasket-customize d-flex align-items-center justify-content-between">
+                              <div className="ebasket-left">
+                                <div className="items">
+                                  <Link href="details">
+                                    <span className="icon">
+                                      <img src={team1.img} alt="flag" />
+                                    </span>
+                                    <span>{team1.name}</span>
+                                  </Link>
+                                </div>
+                                <div className="items">
+                                  <Link href="details">
+                                    <span className="icon">
+                                      <img src={team2.img} alt="plag" />
+                                    </span>
+                                    <span>{team2.name}</span>
+                                  </Link>
+                                </div>
+                              </div>
+                              <div className="ebasket-right-content">
+                                <Link href="#0">
+                                  <span className="blods">{team1.score}</span>{" "}
+                                  Q1 Q2 Q3
+                                </Link>
+                                <Link href="#0">22 16 5</Link>
+                                <Link href="#0">
+                                  <span className="blods">{team2.score}</span>{" "}
+                                  17 30 6
+                                </Link>
+                              </div>
+                            </div>
+                            <div className="table-body-right">
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">1</span>
+                                <span>12.00</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">X</span>
+                                <span>37.00</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">1.5</span>
+                                <span>2.20</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">O 41.5</span>
+                                <span>1.02</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">U 41.5</span>
+                                <span>1.77</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="batbinton">
+                                  <img
+                                    src="/img/table/batbintonplay.png"
+                                    alt="img"
+                                  />
+                                </span>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    )}
+                  </div>
+
+                  <div className="match-table-head pt-20">
+                    <h3 className="tody-space">Aujourdhui</h3>
+                  </div>
+                  <div className="table-wrap">
+                    {liveEvents
+                      .slice(0, 6)
+                      .map(({ id, img, team1, team2, title }) => (
+                        <div key={id} className="table-inner">
+                          <div className="table-head">
+                            <Link href="details" className="left-compo">
+                              <span>
+                                <img src={img} alt="icon" />
+                              </span>
+                              <span>{title} </span>
+                            </Link>
+                            <ul className="right-compo">
+                              <li>Oct 21 00:45</li>
+                              <li>Match Winner</li>
+                              <li>Total</li>
+                            </ul>
+                          </div>
+                          <div className="table-body">
+                            <ul className="table-body-left">
+                              <li>
+                                <Link href="#0">
+                                  <span>{team1.name}</span>
+                                  <span className="icon">
+                                    <img src={team1.img} alt="flag" />
+                                  </span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link href="#0" className="vs">
+                                  VS
+                                </Link>
+                              </li>
+                              <li>
+                                <Link href="#0">
+                                  <span className="icon">
+                                    <img src={team2.img} alt="flag" />
+                                  </span>
+                                  <span>{team2.name}</span>
+                                </Link>
+                              </li>
+                            </ul>
+                            <div className="table-body-right">
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">1</span>
+                                <span>2.08</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">X</span>
+                                <span>2.08</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">2</span>
+                                <span>2.08</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">O 2.5</span>
+                                <span>2.08</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="list">U 2.5</span>
+                                <span>2.08</span>
+                              </Link>
+                              <Link href="#0" className="table-pointing-box">
+                                <span className="last-digit">+327</span>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <!--Sponsor Section--> */}
+      <Sponsor />
+    </>
+  );
+};

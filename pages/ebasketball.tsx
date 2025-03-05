@@ -78,7 +78,7 @@ const liveEvents = [
 
 const matchData = [
    {
-      "Today": [{
+      "Aujourdhui": [{
          id: 1,
          img: '/img/table/csgo2.png',
          title: 'South Korean Championship. KBL',
@@ -207,201 +207,227 @@ const matchData = [
 const ebasketball = () => {
    const [isOpen, setOpen] = useState(false)
    return (
-      <>
-         <BreadCrumb title="Ebasketball" />
-         {/* <!--Breadcumnd--> */}
+     <>
+       <BreadCrumb title="Ebasketball" />
+       {/* <!--Breadcumnd--> */}
 
-         {/* <!--Main-body-tabing--> */}
-         <div className="main-body-tabbing">
-            <div className="container">
-               <div className="main-tabbing">
-                  <div className="tab-content" id="tabContentmain">
-                     {/* <!--all tab start--> */}
-                     <div className="tab-pane fade show active" id="betsall" role="tabpanel">
-                        <div className="match-table">
-                           {/* <!--table five--> */}
-                           <div className="match-table-head mt-span-7 mb-3">
-                              <h3>
-                                 Live events
-                              </h3>
+       {/* <!--Main-body-tabing--> */}
+       <div className="main-body-tabbing">
+         <div className="container">
+           <div className="main-tabbing">
+             <div className="tab-content" id="tabContentmain">
+               {/* <!--all tab start--> */}
+               <div
+                 className="tab-pane fade show active"
+                 id="betsall"
+                 role="tabpanel"
+               >
+                 <div className="match-table">
+                   {/* <!--table five--> */}
+                   <div className="match-table-head mt-span-7 mb-3">
+                     <h3>Evenement en Direct</h3>
+                   </div>
+                   <div className="table-wrap mb-2">
+                     {liveEvents.map(({ id, img, team1, team2, title }) => (
+                       <div
+                         key={id}
+                         className="table-inner efootball-customize"
+                       >
+                         <div className="table-head">
+                           <Link href="details" className="left-compo">
+                             <span>
+                               <i className="icon-basketball"></i>
+                             </span>
+                             <span className="leuge-title">{title}</span>
+                           </Link>
+                           <ul className="right-compo">
+                             <li className="dotsred">Half 2'47</li>
+                             <li>Winner. Main time</li>
+                             <li>Total</li>
+                           </ul>
+                         </div>
+                         <div className="table-body">
+                           <div className="table-body-left ebasket-customize d-flex align-items-center justify-content-between">
+                             <div className="ebasket-left">
+                               <div className="items">
+                                 <Link href="#0">
+                                   <span className="icon">
+                                     <i className="icon-basketball"></i>
+                                   </span>
+                                   <span>{team1.name}</span>
+                                 </Link>
+                               </div>
+                               <div className="items">
+                                 <Link href="#0">
+                                   <span className="icon">
+                                     <i className="icon-basketball"></i>
+                                   </span>
+                                   <span>{team2.name}</span>
+                                 </Link>
+                               </div>
+                             </div>
+                             <div className="ebasket-right-content">
+                               <Link href="#0">
+                                 <span className="blods">{team1.score}</span> H1
+                                 H2
+                               </Link>
+                               <Link href="#0">10</Link>
+                               <Link href="#0">
+                                 <span className="blods">{team2.score}</span> 10
+                               </Link>
+                             </div>
                            </div>
-                           <div className="table-wrap mb-2">
-                              {
-                                 liveEvents.map(({ id, img, team1, team2, title }) => (
-                                    <div key={id} className="table-inner efootball-customize">
-                                       <div className="table-head">
-                                          <Link href="details" className="left-compo">
-                                             <span>
-                                                <i className="icon-basketball"></i>
-                                             </span>
-                                             <span className="leuge-title">{title}</span>
-                                          </Link>
-                                          <ul className="right-compo">
-                                             <li className="dotsred">
-                                                Half 2'47
-                                             </li>
-                                             <li>
-                                                Winner. Main time
-                                             </li>
-                                             <li>
-                                                Total
-                                             </li>
-                                          </ul>
-                                       </div>
-                                       <div className="table-body">
-                                          <div className="table-body-left ebasket-customize d-flex align-items-center justify-content-between">
-                                             <div className="ebasket-left">
-                                                <div className="items">
-                                                   <Link href="#0">
-                                                      <span className="icon">
-                                                         <i className="icon-basketball"></i>
-                                                      </span>
-                                                      <span>{team1.name}</span>
-                                                   </Link>
-                                                </div>
-                                                <div className="items">
-                                                   <Link href="#0">
-                                                      <span className="icon">
-                                                         <i className="icon-basketball"></i>
-                                                      </span>
-                                                      <span>{team2.name}</span>
-                                                   </Link>
-                                                </div>
-                                             </div>
-                                             <div className="ebasket-right-content">
-                                                <Link href="#0"><span className="blods">{team1.score}</span> H1 H2</Link>
-                                                <Link href="#0">10</Link>
-                                                <Link href="#0"><span className="blods">{team2.score}</span> 10</Link>
-                                             </div>
-                                          </div>
-                                          <div className="table-body-right">
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">1</span>
-                                                <span>5.05</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">X</span>
-                                                <span>7.10</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">5.4</span>
-                                                <span>5.10</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">O 1.50</span>
-                                                <span>8.02</span>
-                                             </Link>
-                                             <Link href="#0" className="table-pointing-box">
-                                                <span className="list">U 71.5</span>
-                                                <span>1.27</span>
-                                             </Link>
-                                             <Link href="#" onClick={() => setOpen(true)} className="table-pointing-box video-btn">
-                                                <span className="basketman">
-                                                   <img src={img} alt="img" />
-                                                </span>
-                                             </Link>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 ))
-                              }
+                           <div className="table-body-right">
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">1</span>
+                               <span>5.05</span>
+                             </Link>
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">X</span>
+                               <span>7.10</span>
+                             </Link>
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">5.4</span>
+                               <span>5.10</span>
+                             </Link>
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">O 1.50</span>
+                               <span>8.02</span>
+                             </Link>
+                             <Link href="#0" className="table-pointing-box">
+                               <span className="list">U 71.5</span>
+                               <span>1.27</span>
+                             </Link>
+                             <Link
+                               href="#"
+                               onClick={() => setOpen(true)}
+                               className="table-pointing-box video-btn"
+                             >
+                               <span className="basketman">
+                                 <img src={img} alt="img" />
+                               </span>
+                             </Link>
                            </div>
-                           {matchData.map((item, index) => (
-                              <div key={index}>
-                                 {Object.entries(item).map(([key, value]) => (
-                                    <div key={key}>
-                                       <div className="match-table-head pt-20 pb-20">
-                                          <h2>{key} </h2>
-                                       </div>
-                                       <div className="table-wrap mb-5">
-                                          {value.map((singleItem: matchInterface) => (
-                                             <div key={singleItem.id} className="table-inner">
-                                                <div className="table-head">
-                                                   <Link href="details" className="left-compo">
-                                                      <span>
-                                                         <img src={singleItem.img} alt="icon" />
-                                                      </span>
-                                                      <span>{singleItem.title}</span>
-                                                   </Link>
-                                                   <ul className="right-compo">
-                                                      <li>
-                                                         Live dans: 6m
-                                                      </li>
-                                                      <li>
-                                                         vainqueur du match
-                                                      </li>
-                                                      <li>
-                                                         Total 
-                                                      </li>
-                                                   </ul>
-                                                </div>
-                                                <div className="table-body">
-                                                   <ul className="table-body-left">
-                                                      <li>
-                                                         <Link href="#0">
-                                                            <span>{singleItem.team1.name}</span>
-                                                            <span className="icon">
-                                                               <img src={singleItem.team1.img} alt="flag" />
-                                                            </span>
-                                                         </Link>
-                                                      </li>
-                                                      <li>
-                                                         <Link href="#0" className="vs">
-                                                            VS
-                                                         </Link>
-                                                      </li>
-                                                      <li>
-                                                         <Link href="#0">
-                                                            <span className="icon">
-                                                               <img src={singleItem.team2.img} alt="flag" />
-                                                            </span>
-                                                            <span>{singleItem.team2.name}</span>
-                                                         </Link>
-                                                      </li>
-                                                   </ul>
-                                                   <div className="table-body-right">
-                                                      <Link href="#0" className="table-pointing-box">
-                                                         <span className="list">1</span>
-                                                         <span>5.58</span>
-                                                      </Link>
-                                                      <Link href="#0" className="table-pointing-box">
-                                                         <span className="list">2</span>
-                                                         <span>2.98</span>
-                                                      </Link>
-                                                      <Link href="#0" className="table-pointing-box">
-                                                         <span className="list">O 2.5</span>
-                                                         <span>1.84</span>
-                                                      </Link>
-                                                      <Link href="#0" className="table-pointing-box">
-                                                         <span className="list">U 2.5</span>
-                                                         <span>5.7</span>
-                                                      </Link>
-                                                      <Link href="#0" className="table-pointing-box">
-                                                         <span className="last-digit">+25</span>
-                                                      </Link>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          ))}
-                                       </div>
-                                    </div>
-                                 ))}
-                              </div>
-                           ))}
-                        </div>
+                         </div>
+                       </div>
+                     ))}
+                   </div>
+                   {matchData.map((item, index) => (
+                     <div key={index}>
+                       {Object.entries(item).map(([key, value]) => (
+                         <div key={key}>
+                           <div className="match-table-head pt-20 pb-20">
+                             <h2>{key} </h2>
+                           </div>
+                           <div className="table-wrap mb-5">
+                             {value.map((singleItem: matchInterface) => (
+                               <div key={singleItem.id} className="table-inner">
+                                 <div className="table-head">
+                                   <Link href="details" className="left-compo">
+                                     <span>
+                                       <img src={singleItem.img} alt="icon" />
+                                     </span>
+                                     <span>{singleItem.title}</span>
+                                   </Link>
+                                   <ul className="right-compo">
+                                     <li>Live dans: 6m</li>
+                                     <li>vainqueur du match</li>
+                                     <li>Total</li>
+                                   </ul>
+                                 </div>
+                                 <div className="table-body">
+                                   <ul className="table-body-left">
+                                     <li>
+                                       <Link href="#0">
+                                         <span>{singleItem.team1.name}</span>
+                                         <span className="icon">
+                                           <img
+                                             src={singleItem.team1.img}
+                                             alt="flag"
+                                           />
+                                         </span>
+                                       </Link>
+                                     </li>
+                                     <li>
+                                       <Link href="#0" className="vs">
+                                         VS
+                                       </Link>
+                                     </li>
+                                     <li>
+                                       <Link href="#0">
+                                         <span className="icon">
+                                           <img
+                                             src={singleItem.team2.img}
+                                             alt="flag"
+                                           />
+                                         </span>
+                                         <span>{singleItem.team2.name}</span>
+                                       </Link>
+                                     </li>
+                                   </ul>
+                                   <div className="table-body-right">
+                                     <Link
+                                       href="#0"
+                                       className="table-pointing-box"
+                                     >
+                                       <span className="list">1</span>
+                                       <span>5.58</span>
+                                     </Link>
+                                     <Link
+                                       href="#0"
+                                       className="table-pointing-box"
+                                     >
+                                       <span className="list">2</span>
+                                       <span>2.98</span>
+                                     </Link>
+                                     <Link
+                                       href="#0"
+                                       className="table-pointing-box"
+                                     >
+                                       <span className="list">O 2.5</span>
+                                       <span>1.84</span>
+                                     </Link>
+                                     <Link
+                                       href="#0"
+                                       className="table-pointing-box"
+                                     >
+                                       <span className="list">U 2.5</span>
+                                       <span>5.7</span>
+                                     </Link>
+                                     <Link
+                                       href="#0"
+                                       className="table-pointing-box"
+                                     >
+                                       <span className="last-digit">+25</span>
+                                     </Link>
+                                   </div>
+                                 </div>
+                               </div>
+                             ))}
+                           </div>
+                         </div>
+                       ))}
                      </div>
-                     {/* <!--all tab End--> */}
-                  </div>
+                   ))}
+                 </div>
                </div>
-            </div>
+               {/* <!--all tab End--> */}
+             </div>
+           </div>
          </div>
-         {/* <!--Main-body-tabing--> */}
+       </div>
+       {/* <!--Main-body-tabing--> */}
 
-         {/* <!--Sponsor Section--> */}
-         <Sponsor />
-         
-         <ModalVideo channel='youtube' isOpen={isOpen} videoId="Qg6zu49kXSA" onClose={() => setOpen(false)} />
-      </>
+       {/* <!--Sponsor Section--> */}
+       <Sponsor />
+
+       <ModalVideo
+         channel="youtube"
+         isOpen={isOpen}
+         videoId="Qg6zu49kXSA"
+         onClose={() => setOpen(false)}
+       />
+     </>
    );
 };
 

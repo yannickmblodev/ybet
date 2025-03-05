@@ -15,57 +15,59 @@ interface matchInterface {
    }
 }
 const matchData = [
-   {
-      "Today": [{
-         id: 1,
-         img: '',
-         title: 'World Championship. Qualification',
-         team1: { name: 'Kazakhstan', img: '' },
-         team2: { name: 'Slovenia', img: '' }
+  {
+    Aujourdhui: [
+      {
+        id: 1,
+        img: "",
+        title: "World Championship. Qualification",
+        team1: { name: "Kazakhstan", img: "" },
+        team2: { name: "Slovenia", img: "" },
       },
       {
-         id: 2,
-         img: '/img/table/prod2.png',
-         title: 'World Championship. Qualification',
-         team2: { name: 'Moldova', img: '' },
-         team1: { name: 'Cyprus', img: '' }
+        id: 2,
+        img: "/img/table/prod2.png",
+        title: "World Championship. Qualification",
+        team2: { name: "Moldova", img: "" },
+        team1: { name: "Cyprus", img: "" },
       },
       {
-         id: 3,
-         img: '',
-         title: 'World Championship. Qualification',
-         team1: { name: 'Belgium', img: '' },
-         team2: { name: 'Moldova', img: '' }
+        id: 3,
+        img: "",
+        title: "World Championship. Qualification",
+        team1: { name: "Belgium", img: "" },
+        team2: { name: "Moldova", img: "" },
       },
       {
-         id: 4,
-         img: '',
-         title: 'World Championship. Qualification',
-         team1: { name: 'Georgia', img: '' },
-         team2: { name: 'Slovenia', img: '' }
+        id: 4,
+        img: "",
+        title: "World Championship. Qualification",
+        team1: { name: "Georgia", img: "" },
+        team2: { name: "Slovenia", img: "" },
       },
 
-         ,]
-   },
-   {
-      "Tomorrow": [{
-         id: 5,
-         img: '',
-         title: 'World Championship. Qualification',
-         team1: { name: 'Georgia', img: '' },
-         team2: { name: 'Slovenia', img: '' }
+      ,
+    ],
+  },
+  {
+    Tomorrow: [
+      {
+        id: 5,
+        img: "",
+        title: "World Championship. Qualification",
+        team1: { name: "Georgia", img: "" },
+        team2: { name: "Slovenia", img: "" },
       },
       {
-         id: 6,
-         img: '',
-         title: 'World Championship. Qualification',
-         team1: { name: 'Belgium', img: '' },
-         team2: { name: 'Moldova', img: '' }
-      }
-      ]
-   },
-
-]
+        id: 6,
+        img: "",
+        title: "World Championship. Qualification",
+        team1: { name: "Belgium", img: "" },
+        team2: { name: "Moldova", img: "" },
+      },
+    ],
+  },
+];
 const futsal = () => {
    return (
       <>
