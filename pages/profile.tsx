@@ -1,8 +1,25 @@
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import BreadCrumb from "@/components/BreadCrumb";
 import Sponsor from "@/components/Sponsor";
+import { auth } from "@/firebase";
+import { onAuthStateChanged, User } from "firebase/auth";
 
 const profile = () => {
+  const [user, setUser] = useState<User | null>(null); // Typage de l'état user
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user); // Si l'utilisateur est connecté, mettez à jour l'état
+      } else {
+        setUser(null); // Si l'utilisateur n'est pas connecté, mettez l'état à null
+      }
+    });
+
+    return () => unsubscribe(); // Nettoyage de l'écouteur lorsque le composant est démonté
+  }, []);
+
   const annees = [];
   for (let year = 1960; year <= 2007; year++) {
     annees.push(
@@ -111,7 +128,11 @@ const profile = () => {
                       </div>
                       <form action="#0">
                         <div className="form-grp">
-                          <input type="text" placeholder="jijiwi2841" />
+                          {/* <input type="text" placeholder="entrer votre nom" /> */}
+                          <input
+                            type="text"
+                            placeholder={user?.name || "entrer votre nom"}
+                          />
                           <div className="left-icon">
                             <i className="fas fa-user"></i>
                           </div>
@@ -120,7 +141,11 @@ const profile = () => {
                           </div>
                         </div>
                         <div className="form-grp form-grp-two">
-                          <input type="email" placeholder="example@mail.com" />
+                          <input
+                            type="email"
+                            placeholder={user?.email || "Entrez votre email"}
+                          />
+
                           <div className="left-icon">
                             <i className="fas fa-envelope"></i>
                           </div>
@@ -132,7 +157,7 @@ const profile = () => {
                           </Link>
                         </div>
                         <div className="form-grp">
-                          <input type="number" placeholder="(208) 555-0112" />
+                          <input type="number" placeholder="+225 0001010101" />
                           <div className="left-icon">
                             <i className="fas fa-phone"></i>
                           </div>
@@ -150,7 +175,7 @@ const profile = () => {
                         <div className="down">
                           <img src="/img/table/details/picture.png" alt="img" />
                         </div>
-                        <Link href="#0">Choose file to upload</Link>
+                        <Link href="#0">Ajouter une pièce d'identité</Link>
                         <p>
                           Fichiers pris en charge : JPG, JPEG, PNG, BMP PDF, TIE
                           TIFF avec une taille maximale de 5 ME
@@ -223,556 +248,7 @@ const profile = () => {
                 </div>
               </div>
             </div>
-            <div className="tab-pane fade" id="profile3" role="tabpanel">
-              <div className="row justify-content-between">
-                <div className="col-xxl-7 col-xl-12 col-lg-7">
-                  <div className="reword-wrap-left">
-                    <div className="reword-box">
-                      <div className="profited-man">
-                        <img src="/img/table/details/porfitman.png" alt="man" />
-                      </div>
-                      <div className="profit-lebel">
-                        <div className="label">
-                          <span>Level 1</span>
-                          <span>Level 2</span>
-                        </div>
-                        <span className="bar"></span>
-                        <Link href="#0">
-                          67976 XP remaining to your next Tier
-                        </Link>
-                      </div>
-                    </div>
-                    <div className="reword-history">
-                      <div className="head">
-                        <h6>Rewards</h6>
-                        <span>View reward history</span>
-                      </div>
-                      <div className="reword-history-wrap">
-                        <div className="reword-history-box">
-                          <Link href="#0" className="re-btn">
-                            <span className="text-base">Instant</span> Rakeback
-                          </Link>
-                          <div className="reword-history-right-timing">
-                            <Link href="#0">$0</Link>
-                            <i className="fa-solid fa-lock"></i>
-                            <div className="timing">
-                              <span>Unavailable</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="reword-history-box">
-                          <Link href="#0" className="re-btn">
-                            <span className="text-base">Weekly</span> Rakeback
-                          </Link>
-                          <div className="reword-history-right-timing">
-                            <Link href="#0">$0</Link>
-                            <i className="fa-solid fa-lock"></i>
-                            <div className="timing">
-                              <ul
-                                className="countdown"
-                                data-date="10/29/2023 16:16:00"
-                              >
-                                <li>09-17</li>
-                                <li>
-                                  <span className="date">03:</span>
-                                </li>
-                                <li>
-                                  <span className="seconds">22s</span>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="reword-history-box">
-                          <Link href="#0" className="re-btn">
-                            <span className="text-base">Monthly</span> Rakeback
-                          </Link>
-                          <div className="reword-history-right-timing">
-                            <Link href="#0">$0</Link>
-                            <i className="fa-solid fa-lock"></i>
-                            <div className="timing">
-                              <ul
-                                className="countdown"
-                                data-date="10/29/2023 16:16:00"
-                              >
-                                <li>09-17</li>
-                                <li>
-                                  <span className="date">03:</span>
-                                </li>
-                                <li>
-                                  <span className="seconds">22s</span>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* <div className="col-xxl-4 col-xl-12 col-lg-4">
-                  <div className="rakeback-wrap">
-                    <h6 className="rakeback-head">Rakeback Tiers</h6>
-                    <div className="detail-match-winner rakeback-accordion">
-                      <div className="details-match-wrap">
-                        <div className="accordion" id="rakeback-accordion">
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback1"
-                                aria-expanded="false"
-                                aria-controls="rakeback1"
-                              >
-                                <span>Level 1 - 10</span>
-                              </button>
-                              <div
-                                id="rakeback1"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback2"
-                                aria-expanded="false"
-                                aria-controls="rakeback2"
-                              >
-                                <span>Level 11-20</span>
-                              </button>
-                              <div
-                                id="rakeback2"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback3"
-                                aria-expanded="false"
-                                aria-controls="rakeback3"
-                              >
-                                <span>Level 21-30</span>
-                              </button>
-                              <div
-                                id="rakeback3"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback4"
-                                aria-expanded="false"
-                                aria-controls="rakeback4"
-                              >
-                                <span>Level 41-50</span>
-                              </button>
-                              <div
-                                id="rakeback4"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback5"
-                                aria-expanded="false"
-                                aria-controls="rakeback5"
-                              >
-                                <span>Level 51 - 65</span>
-                              </button>
-                              <div
-                                id="rakeback5"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback6"
-                                aria-expanded="false"
-                                aria-controls="rakeback6"
-                              >
-                                <span>Level 66-80</span>
-                              </button>
-                              <div
-                                id="rakeback6"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback7"
-                                aria-expanded="false"
-                                aria-controls="rakeback7"
-                              >
-                                <span>Level 81-100</span>
-                              </button>
-                              <div
-                                id="rakeback7"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback8"
-                                aria-expanded="false"
-                                aria-controls="rakeback8"
-                              >
-                                <span>Level 101-120</span>
-                              </button>
-                              <div
-                                id="rakeback8"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback9"
-                                aria-expanded="false"
-                                aria-controls="rakeback9"
-                              >
-                                <span>Level 121-140</span>
-                              </button>
-                              <div
-                                id="rakeback9"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="accordion-item">
-                            <div className="accordion-header">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#rakeback10"
-                                aria-expanded="false"
-                                aria-controls="rakeback10"
-                              >
-                                <span>Level 141+</span>
-                              </button>
-                              <div
-                                id="rakeback10"
-                                className="accordion-collapse collapse"
-                              >
-                                <div className="accordion-body d-flex align-items-center justify-content-between">
-                                  <div className="rakeback-accor-body">
-                                    <p>
-                                      Users in this category have automatically
-                                      increased Rakebacks
-                                    </p>
-                                    <ul>
-                                      <li>
-                                        Instant Rakeback{" "}
-                                        <span className="text-base">6%</span>
-                                      </li>
-                                      <li>
-                                        Daily Surprise Up To{" "}
-                                        <span className="text-base">35%</span>
-                                      </li>
-                                      <li>
-                                        Weekly Rakeback{" "}
-                                        <span className="text-base">2%</span>
-                                      </li>
-                                      <li>
-                                        Monthly Rakeback{" "}
-                                        <span className="text-base">1%</span>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-              </div>
-            </div>
+            
             <div className="tab-pane fade" id="profile4" role="tabpanel">
               <div className="row justify-content-between">
                 <h3 className="wallet-title">Déposer ou retirer de l'argent</h3>

@@ -325,13 +325,13 @@ const ebasketball = () => {
                                                    </Link>
                                                    <ul className="right-compo">
                                                       <li>
-                                                         Live in: 6m
+                                                         Live dans: 6m
                                                       </li>
                                                       <li>
-                                                         Match Winner
+                                                         vainqueur du match
                                                       </li>
                                                       <li>
-                                                         Total maps
+                                                         Total 
                                                       </li>
                                                    </ul>
                                                 </div>

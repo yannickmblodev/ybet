@@ -151,6 +151,7 @@ export default function Layout({ children }: Props) {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [ddn, setDdn] = useState("");
+  const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
 
   return (
@@ -1161,6 +1162,21 @@ export default function Layout({ children }: Props) {
                           name="email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
+                        />
+                      </div>
+                    </div>
+                    <div className="items">
+                      <div className="form-input">
+                        <label htmlFor="email33" className="form-label">
+                          Email
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          placeholder="Téléphone"
+                          name="phone"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
                         />
                       </div>
                     </div>

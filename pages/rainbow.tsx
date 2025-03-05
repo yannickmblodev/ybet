@@ -160,13 +160,13 @@ const rainbow = () => {
                                                    </Link>
                                                    <ul className="right-compo">
                                                       <li>
-                                                         Live in: 29m
+                                                         Live dans: 29m
                                                       </li>
                                                       <li>
-                                                         Match Winner
+                                                         vainqueur du match
                                                       </li>
                                                       <li>
-                                                         Total maps
+                                                         Total 
                                                       </li>
                                                    </ul>
                                                 </div>

@@ -180,9 +180,9 @@ const csgo = () => {
                                     <span>{singleItem.title}</span>
                                   </Link>
                                   <ul className="right-compo">
-                                    <li>Live in: 6m</li>
-                                    <li>Match Winner</li>
-                                    <li>Total maps</li>
+                                    <li>Live dans: 6m</li>
+                                    <li>vainqeur du match</li>
+                                    <li>Total </li>
                                   </ul>
                                 </div>
                                 <div className="table-body">

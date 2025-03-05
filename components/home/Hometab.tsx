@@ -214,7 +214,7 @@ const Hometab = () => {
                             {/* <!--countries section--> */}
                             <div className="head-title mt-3 mb-4">
                                 <h2>
-                                    Top Leagues
+                                    Top Championnat
                                 </h2>
                             </div>
                             <div className="leauge-name d-flex align-items-center justify-content-between">
@@ -228,7 +228,7 @@ const Hometab = () => {
                             </div>
                             <div className="head-title-two">
                                 <h3>
-                                    Countries
+                                    Pays
                                 </h3>
                             </div>
                             <div className="countries-tab pb-60">

@@ -196,11 +196,12 @@ const basketball = () => {
               <div
                 className="tab-pane fade show active"
                 id="betsall"
-                role="tabpanel">
+                role="tabpanel"
+              >
                 <div className="match-table">
                   {/* <!--table five--> */}
                   <div className="match-table-head mt-span-7 mb-4">
-                    <h3>Live events</h3>
+                    <h3>Événements en direct</h3>
                   </div>
                   <div className="table-wrap mb-4">
                     <div className="table-inner">
@@ -213,7 +214,7 @@ const basketball = () => {
                         </Link>
                         <ul className="right-compo">
                           <li className="dotsred">Live</li>
-                          <li>Winner. Main time</li>
+                          <li>Vainqueur. Heure principale</li>
                           <li>Total Quarter 3</li>
                         </ul>
                       </div>
@@ -275,7 +276,7 @@ const basketball = () => {
                         </Link>
                         <ul className="right-compo">
                           <li className="dotsred">Live</li>
-                          <li>Winner. Main time</li>
+                          <li>Vainqueur. Heure principale</li>
                           <li>Total Quarter 3</li>
                         </ul>
                       </div>
@@ -349,8 +350,8 @@ const basketball = () => {
                                     <span>{singleItem.title}</span>
                                   </Link>
                                   <ul className="right-compo">
-                                    <li>Live in: 6m</li>
-                                    <li>Match Winner</li>
+                                    <li>Live dans: 6m</li>
+                                    <li>vainqueur du match</li>
                                     <li>Total maps</li>
                                   </ul>
                                 </div>
@@ -387,31 +388,36 @@ const basketball = () => {
                                   <div className="table-body-right">
                                     <Link
                                       href="#0"
-                                      className="table-pointing-box">
+                                      className="table-pointing-box"
+                                    >
                                       <span className="list">1</span>
                                       <span>5.58</span>
                                     </Link>
                                     <Link
                                       href="#0"
-                                      className="table-pointing-box">
+                                      className="table-pointing-box"
+                                    >
                                       <span className="list">2</span>
                                       <span>2.98</span>
                                     </Link>
                                     <Link
                                       href="#0"
-                                      className="table-pointing-box">
+                                      className="table-pointing-box"
+                                    >
                                       <span className="list">O 2.5</span>
                                       <span>1.84</span>
                                     </Link>
                                     <Link
                                       href="#0"
-                                      className="table-pointing-box">
+                                      className="table-pointing-box"
+                                    >
                                       <span className="list">U 2.5</span>
                                       <span>5.7</span>
                                     </Link>
                                     <Link
                                       href="#0"
-                                      className="table-pointing-box">
+                                      className="table-pointing-box"
+                                    >
                                       <span className="last-digit">+25</span>
                                     </Link>
                                   </div>

@@ -158,9 +158,9 @@ const lol = () => {
                                     <span>{singleItem.title} </span>
                                   </Link>
                                   <ul className="right-compo">
-                                    <li>Live in: 29m</li>
-                                    <li>Match Winner</li>
-                                    <li>Total maps</li>
+                                    <li>Live dans: 29m</li>
+                                    <li>vainqueur du match</li>
+                                    <li>Total </li>
                                   </ul>
                                 </div>
                                 <div className="table-body">

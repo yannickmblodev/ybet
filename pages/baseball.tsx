@@ -134,9 +134,9 @@ const baseball = () => {
                                     <span>{singleItem.title}</span>
                                   </Link>
                                   <ul className="right-compo">
-                                    <li>Live in: 6m</li>
-                                    <li>Match Winner</li>
-                                    <li>Total maps</li>
+                                    <li>Live : 6m</li>
+                                    <li>Vainqueur du match</li>
+                                    <li>Total</li>
                                   </ul>
                                 </div>
                                 <div className="table-body">
