@@ -12,7 +12,10 @@ import {
 } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import AlertBar from "./AlertBar";
-
+interface Bet {
+  match: string; // Ou un autre type selon votre logique
+  // autres propriétés du bet
+}
 interface Option {
   value: string;
   label: string;
@@ -63,7 +66,22 @@ export default function Layout({ children }: Props) {
     }),
   };
 
-  const handleRegister = async (e) => {
+  // const handleRegister = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const userCredential = await createUserWithEmailAndPassword(
+  //       auth,
+  //       email,
+  //       password
+  //     );
+  //     console.log("Utilisateur créé :", userCredential.user);
+  //     alert("Compte créé avec succès !");
+  //   } catch (error) {
+  //     setError(error.message);
+  //   }
+  // };
+
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const userCredential = await createUserWithEmailAndPassword(
@@ -74,25 +92,36 @@ export default function Layout({ children }: Props) {
       console.log("Utilisateur créé :", userCredential.user);
       alert("Compte créé avec succès !");
     } catch (error) {
-      setError(error.message);
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("Une erreur inconnue est survenue.");
+      }
     }
   };
 
+
   // Fonction pour ajouter une cote sélectionnée
   const handleSelectOdds = (bet) => {
+    // @ts-ignore
     setSelectedOdds((prevOdds) => {
       // Vérifie si une cote sur le même match existe déjà
+      // @ts-ignore
       const alreadyExists = prevOdds.some((odds) => odds.match === bet.match);
       if (alreadyExists) {
+        // @ts-ignore
         return prevOdds.map((odds) => (odds.match === bet.match ? bet : odds));
       }
       return [...prevOdds, bet];
     });
   };
 
+ 
+
   useEffect(() => {
     // Surveiller l'état de connexion de l'utilisateur
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      // @ts-ignore
       setUser(currentUser);
     });
 
@@ -112,6 +141,7 @@ export default function Layout({ children }: Props) {
       alert("Connexion réussie !");
     } catch (error) {
       setError("Échec de la connexion. Vérifiez vos informations.");
+      // @ts-ignore
       console.error("Erreur de connexion :", error.message);
     }
   };

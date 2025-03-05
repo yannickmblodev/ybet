@@ -206,6 +206,7 @@ const Live = ({ onSelectOdds }) => {
           "https://apiv2.allsportsapi.com/football/?met=OddsLive&APIkey=f502da57fbafeda150348df5890f55c5946fe30acd824007828b7eb6f8e7d9ca"
         );
         const data = await response.json();
+        // @ts-ignore
         if (data.success === 1) setOddsData(Object.entries(data.result));
       } catch (error) {
         console.error("Erreur lors du chargement des cotes :", error);
@@ -277,6 +278,7 @@ const Live = ({ onSelectOdds }) => {
 
       // Affichage de la notification
       setNotification(
+        // @ts-ignore
         `Vous avez sélectionné ${matches[matchId].team1} vs ${matches[matchId].team2} - Cote: ${oddType} (${oddValue})`
       );
       setTimeout(() => setNotification(null), 3000); // Efface après 3 secondes
@@ -303,10 +305,13 @@ const Live = ({ onSelectOdds }) => {
                   <div className="table-wrap mb-2">
                     {oddsData.length > 0 ? (
                       oddsData.map(([matchId, odds]) => {
+                        // @ts-ignore
                         const v1 = odds.find((odd) => odd.odd_type === "Home");
+                        // @ts-ignore
                         const draw = odds.find(
                           (odd) => odd.odd_type === "Draw"
                         );
+                        // @ts-ignore
                         const v2 = odds.find((odd) => odd.odd_type === "Away");
 
                         const teams = matches[matchId] || {
@@ -323,6 +328,7 @@ const Live = ({ onSelectOdds }) => {
                         return (
                           <div key={matchId} className="table-inner">
                             <div className="table-head">
+                              {/* @ts-ignore */}
                               <span>{teams.league}</span>
                             </div>
                             <div className="table-body">
@@ -332,27 +338,35 @@ const Live = ({ onSelectOdds }) => {
                                   className="team-link"
                                 >
                                   <div className="items">
+                                    {/* @ts-ignore */}
                                     {logos.team1Logo ? (
                                       <img
+                                      // @ts-ignore
                                         src={logos.team1Logo}
+                                        // @ts-ignore
                                         alt={teams.team1}
                                         className="team-logo"
                                       />
                                     ) : (
                                       "⚽"
                                     )}
+                                    {/* @ts-ignore */}
                                     <span>{teams.team1}</span>
                                   </div>
                                   <div className="items">
+                                    {/* @ts-ignore */}
                                     {logos.team2Logo ? (
                                       <img
+                                        // @ts-ignore
                                         src={logos.team2Logo}
+                                        // @ts-ignore
                                         alt={teams.team2}
                                         className="team-logo"
                                       />
                                     ) : (
                                       "⚽"
                                     )}
+                                    {/* @ts-ignore */}
                                     <span>{teams.team2}</span>
                                   </div>
                                 </Link>
@@ -363,6 +377,7 @@ const Live = ({ onSelectOdds }) => {
                                     <button
                                       key={index}
                                       className={`table-pointing-box ${
+                                        // @ts-ignore
                                         selectedOdds[matchId]?.oddType ===
                                         odd.odd_type
                                           ? "selected"

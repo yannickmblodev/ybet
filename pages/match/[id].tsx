@@ -76,6 +76,7 @@ const details = ({ matchId }) => {
               <span>
                 <img src="/img/table/details/scoreboard.png" alt="img" />
               </span>
+              {/* @ts-ignore */}
               <span className="text-base">{match.league_name}</span>
             </div>
             <div className="banner-wrapper owl-theme owl-carousel">
@@ -84,13 +85,16 @@ const details = ({ matchId }) => {
                   <div className="detail-progress-items">
                     <div className="bar1">
                       <div className="changchun">
+                        {/* @ts-ignore */}
                         <img src={match.home_team_logo} alt="img" />
                       </div>
                     </div>
+                    {/* @ts-ignore */}
                     <p>{match.event_home_team}</p>
                   </div>
                   <div className="detail-progress-items details-middle-items">
                     <Link href="#0" className="live">
+                      {/* @ts-ignore */}
                       {match.event_date} à {match.event_time}
                     </Link>
                     <div className="detaisl-middle-circle-wrap d-flex align-items-center">
@@ -158,9 +162,11 @@ const details = ({ matchId }) => {
                   <div className="detail-progress-items detail-last-items">
                     <div className="bar1">
                       <div className="changchun">
+                        {/* @ts-ignore */}
                         <img src={match.away_team_logo} alt="img" />
                       </div>
                     </div>
+                    {/* @ts-ignore */}
                     <p>{match.event_away_team}</p>
                   </div>
                 </div>
@@ -251,11 +257,13 @@ const details = ({ matchId }) => {
 
           <div className="tab-content pt-60" id="d-wrap">
             <div className="tab-pane fade show active" id="detail1">
-              {odds.length > 0 ? (
+              {odds && odds.length > 0 ? (
                 <ul>
                   {odds.map((odd, index) => (
                     <li key={index}>
+                      {/* @ts-ignore */}
                       <strong>{odd.odd_bookmakers}</strong> - {odd.odd_label}:{" "}
+                      {/* @ts-ignore */}
                       {odd.odd_value}
                     </li>
                   ))}

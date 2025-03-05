@@ -6,6 +6,7 @@ const profile = () => {
   const annees = [];
   for (let year = 1960; year <= 2007; year++) {
     annees.push(
+      // @ts-ignore
       <option key={year} value={year}>
         {year}
       </option>

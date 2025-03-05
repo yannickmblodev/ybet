@@ -1,156 +1,38 @@
-// import { useEffect, useState } from "react";
-
-// const API_KEY =
-//   "f502da57fbafeda150348df5890f55c5946fe30acd824007828b7eb6f8e7d9ca";
-
-// export default function Fixtures() {
-//   const [countries, setCountries] = useState([]);
-//   const [leagues, setLeagues] = useState({});
-//   const [fixtures, setFixtures] = useState({});
-
-//   useEffect(() => {
-//     fetch(
-//       `https://apiv2.allsportsapi.com/football/?met=Countries&APIkey=${API_KEY}`
-//     )
-//       .then((res) => res.json())
-//       .then((data) => {
-//         if (data.success) {
-//           setCountries(data.result);
-//         }
-//       });
-//   }, []);
-
-//   const fetchLeagues = (countryKey) => {
-//     if (!leagues[countryKey]) {
-//       fetch(
-//         `https://apiv2.allsportsapi.com/football/?met=Leagues&APIkey=${API_KEY}&countryId=${countryKey}`
-//       )
-//         .then((res) => res.json())
-//         .then((data) => {
-//           if (data.success) {
-//             setLeagues((prev) => ({ ...prev, [countryKey]: data.result }));
-//           }
-//         });
-//     }
-//   };
-
-//   const fetchFixtures = (leagueKey) => {
-//     if (!fixtures[leagueKey]) {
-//       fetch(
-//         `https://apiv2.allsportsapi.com/football/?met=Fixtures&APIkey=${API_KEY}&leagueId=${leagueKey}`
-//       )
-//         .then((res) => res.json())
-//         .then((data) => {
-//           if (data.success) {
-//             setFixtures((prev) => ({ ...prev, [leagueKey]: data.result }));
-//           }
-//         });
-//     }
-//   };
-
-//   return (
-//     <div className="countries-tab pb-60">
-//       <div className="accordion" id="countries">
-//         {countries.map((country) => (
-//           <div key={country.country_key} className="accordion-item">
-//             <div
-//               className="accordion-header"
-//               id={`countriestab${country.country_key}`}
-//             >
-//               <button
-//                 className="accordion-button collapsed"
-//                 type="button"
-//                 data-bs-toggle="collapse"
-//                 data-bs-target={`#country${country.country_key}`}
-//                 aria-expanded="false"
-//                 aria-controls={`country${country.country_key}`}
-//                 onClick={() => fetchLeagues(country.country_key)}
-//               >
-//                 <span className="icon">
-//                   <img
-//                     src={country.country_logo}
-//                     alt={country.country_name}
-//                     width={30}
-//                   />
-//                 </span>
-//                 <span>{country.country_name}</span>
-//               </button>
-//             </div>
-//             <div
-//               id={`country${country.country_key}`}
-//               className="accordion-collapse collapse"
-//               data-bs-parent="#countries"
-//             >
-//               <div className="accordion-body">
-//                 {leagues[country.country_key]?.map((league) => (
-//                   <div key={league.league_key} className="accordion-item">
-//                     <div
-//                       className="accordion-header"
-//                       id={`leaguetab${league.league_key}`}
-//                     >
-//                       <button
-//                         className="accordion-button collapsed"
-//                         type="button"
-//                         data-bs-toggle="collapse"
-//                         data-bs-target={`#league${league.league_key}`}
-//                         aria-expanded="false"
-//                         aria-controls={`league${league.league_key}`}
-//                         onClick={() => fetchFixtures(league.league_key)}
-//                       >
-//                         <span className="icon">
-//                           <img
-//                             src={league.league_logo}
-//                             alt={league.league_name}
-//                             width={30}
-//                           />
-//                         </span>
-//                         <span>{league.league_name}</span>
-//                       </button>
-//                     </div>
-//                     <div
-//                       id={`league${league.league_key}`}
-//                       className="accordion-collapse collapse"
-//                       data-bs-parent={`#country${country.country_key}`}
-//                     >
-//                       <div className="accordion-body">
-//                         {fixtures[league.league_key]?.map((match) => (
-//                           <div
-//                             key={match.event_key}
-//                             className="match-item d-flex justify-content-between align-items-center"
-//                           >
-//                             <span>
-//                               {match.event_date} {match.event_time}
-//                             </span>
-//                             <span>
-//                               {match.event_home_team} vs {match.event_away_team}
-//                             </span>
-//                           </div>
-//                         )) || <p>Chargement des matchs...</p>}
-//                       </div>
-//                     </div>
-//                   </div>
-//                 )) || <p>Chargement des championnats...</p>}
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+// Définition des types
+interface Country {
+  country_key: number;
+  country_name: string;
+  country_logo: string;
+}
+
+interface League {
+  league_key: number;
+  league_name: string;
+  league_logo: string;
+}
+
+interface Match {
+  event_key: number;
+  event_home_team: string;
+  event_away_team: string;
+  event_date: string;
+  event_time: string;
+}
+
 const Football = () => {
-  const [countries, setCountries] = useState([]);
-  const [leagues, setLeagues] = useState({});
-  const [matches, setMatches] = useState({});
+  const [countries, setCountries] = useState<Country[]>([]);
+  const [leagues, setLeagues] = useState<{ [key: number]: League[] }>({});
+  const [matches, setMatches] = useState<{ [key: number]: Match[] }>({});
+
   const today = new Date().toISOString().split("T")[0];
   const twoWeeksLater = new Date();
   twoWeeksLater.setDate(twoWeeksLater.getDate() + 14);
   const futureDate = twoWeeksLater.toISOString().split("T")[0];
 
+  // Récupération des pays
   useEffect(() => {
     fetch(
       "https://apiv2.allsportsapi.com/football/?met=Countries&APIkey=f502da57fbafeda150348df5890f55c5946fe30acd824007828b7eb6f8e7d9ca"
@@ -158,13 +40,14 @@ const Football = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success === 1) {
-          setCountries(data.result);
+          setCountries(data.result as Country[]);
         }
       })
       .catch((err) => console.error("Erreur API Pays:", err));
   }, []);
 
-  const fetchLeagues = (countryKey) => {
+  // Récupération des ligues d'un pays
+  const fetchLeagues = (countryKey: number) => {
     if (leagues[countryKey]) return;
     fetch(
       `https://apiv2.allsportsapi.com/football/?met=Leagues&APIkey=f502da57fbafeda150348df5890f55c5946fe30acd824007828b7eb6f8e7d9ca&countryId=${countryKey}`
@@ -172,13 +55,17 @@ const Football = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success === 1) {
-          setLeagues((prev) => ({ ...prev, [countryKey]: data.result }));
+          setLeagues((prev) => ({
+            ...prev,
+            [countryKey]: data.result as League[],
+          }));
         }
       })
       .catch((err) => console.error("Erreur API Leagues:", err));
   };
 
-  const fetchMatches = (leagueKey) => {
+  // Récupération des matchs d'une ligue
+  const fetchMatches = (leagueKey: number) => {
     if (matches[leagueKey]) return;
     fetch(
       `https://apiv2.allsportsapi.com/football/?met=Fixtures&APIkey=f502da57fbafeda150348df5890f55c5946fe30acd824007828b7eb6f8e7d9ca&leagueId=${leagueKey}&from=${today}&to=${futureDate}`
@@ -186,7 +73,10 @@ const Football = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success === 1) {
-          setMatches((prev) => ({ ...prev, [leagueKey]: data.result }));
+          setMatches((prev) => ({
+            ...prev,
+            [leagueKey]: data.result as Match[],
+          }));
         }
       })
       .catch((err) => console.error("Erreur API Matches:", err));
