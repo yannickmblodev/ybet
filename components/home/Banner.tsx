@@ -49,7 +49,7 @@ const Banner = () => {
           <SwiperSlide className="banner-items banner-bg-three">
             <div className="container">
               <div className="banner-content">
-                <h1>Interdit au -18 Ans</h1>
+                <h1>Interdit aux -18 Ans</h1>
                 <Link
                   href="#0"
                   className="cmn--btn"
